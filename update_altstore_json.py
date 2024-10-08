@@ -1,61 +1,55 @@
-import os
 import requests
 import json
+import os
 
-# GitHub repositories to fetch releases from
-REPOSITORIES = [
-    "Raghav1729/BHTwitter",
-    "Raghav1729/uYouPlus"
-]
+# Constants
+REPO_1 = 'Raghav1729/BHTwitter'  # First GitHub repo
+REPO_2 = 'Raghav1729/uYouPlus'    # Second GitHub repo
+ALTSORE_JSON_PATH = 'altsore.json'  # Path to your altsore JSON file
 
-# GitHub API URL for releases
-GITHUB_API_URL = "https://api.github.com/repos/{repo}/releases"
+def get_latest_release(repo):
+    """Fetch the latest release from a GitHub repository."""
+    url = f'https://api.github.com/repos/{repo}/releases/latest'
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        print(f"Error fetching releases from {repo}: {response.status_code}")
+        return None
 
-# JSON file to be updated (assume it's located at the root of the repository)
-ALTSTORE_JSON_PATH = "altstore_source.json"
+def update_altsore_json(new_data):
+    """Update the altsore JSON file."""
+    if os.path.exists(ALTSORE_JSON_PATH):
+        with open(ALTSORE_JSON_PATH, 'r') as file:
+            altsore_data = json.load(file)
+    else:
+        altsore_data = []
 
-def fetch_latest_releases():
-    """
-    Fetches the latest releases from the GitHub repositories.
-    """
-    releases = []
-    for repo in REPOSITORIES:
-        response = requests.get(GITHUB_API_URL.format(repo=repo))
-        if response.status_code == 200:
-            releases.append(response.json())
-        else:
-            print(f"Error fetching release for {repo}: {response.status_code} - {response.text}")
-    return releases
+    # Check if the release already exists
+    for release in new_data:
+        if not any(r['tag_name'] == release['tag_name'] for r in altsore_data):
+            altsore_data.append(release)
+    
+    # Save the updated data back to the JSON file
+    with open(ALTSORE_JSON_PATH, 'w') as file:
+        json.dump(altsore_data, file, indent=4)
 
-def update_altstore_json(releases):
-    """
-    Updates the altstore source JSON file with the latest release data from multiple repositories.
-    """
-    with open(ALTSTORE_JSON_PATH, 'r') as file:
-        altstore_data = json.load(file)
+def main():
+    """Main function to update altsore JSON based on GitHub releases."""
+    new_releases = []
+    
+    # Get latest releases from both repositories
+    for repo in [REPO_1, REPO_2]:
+        release = get_latest_release(repo)
+        if release:
+            new_releases.append(release)
+    
+    # Update the altsore JSON with new releases
+    if new_releases:
+        update_altsore_json(new_releases)
+        print("altsore.json has been updated.")
+    else:
+        print("No new releases to update.")
 
-    for release_data in releases:
-        for release in release_data:
-            version = release['tag_name']
-            release_notes = release['body']
-            download_url = release['assets'][0]['browser_download_url']
-
-            # Update JSON as per your needs (e.g., appending new releases)
-            altstore_data.append({
-                'version': version,
-                'notes': release_notes,
-                'url': download_url
-            })
-
-    # Write the updated JSON back to the file
-    with open(ALTSTORE_JSON_PATH, 'w') as file:
-        json.dump(altstore_data, file, indent=4)
-
-    print(f"AltStore source JSON updated with {len(releases)} releases")
-
-if __name__ == "__main__":
-    try:
-        latest_releases = fetch_latest_releases()
-        update_altstore_json(latest_releases)
-    except Exception as e:
-        print(f"Error: {e}")
+if __name__ == '__main__':
+    main()
