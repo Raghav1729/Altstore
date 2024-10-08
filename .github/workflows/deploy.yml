@@ -1,45 +1,38 @@
-name: Update AltStore JSON and Deploy to GitHub Pages
+name: Run Python Script
 
 on:
+  push:
+    branches:
+      - main  # Change to your default branch if different
   schedule:
-    - cron: '0 0 * * 1'  # Run every Monday at midnight
-  workflow_dispatch:  # Allows manual triggering
-  release:
-    types: [published]
+    - cron: '0 0 * * 0'  # This runs the workflow every Sunday at midnight UTC.
+  workflow_dispatch:  # Allows manual triggering of the workflow.
 
 jobs:
-  update_json:
+  run-script:
     runs-on: ubuntu-latest
-
+    
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v2
       with:
-        python-version: '3.x'
+        python-version: '3.9'  # Specify the Python version
 
     - name: Install dependencies
       run: |
-        pip install requests
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt  # Install requests
 
-    - name: Run the Python script to update AltStore JSON
-      run: |
-        python update_altstore_json.py
+    - name: Run the script
+      run: python update_altsore.py
 
     - name: Commit and push changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add altstore_source.json
-        git commit -m "Update AltStore JSON with latest releases"
+        git add altsore.json
+        git commit -m "Update altsore.json with the latest releases" || echo "No changes to commit"
         git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./  # Assuming you're publishing the root directory (adjust if needed)
