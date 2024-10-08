@@ -1,0 +1,45 @@
+name: Update AltStore JSON and Deploy to GitHub Pages
+
+on:
+  schedule:
+    - cron: '0 0 * * 1'  # Run every Monday at midnight
+  workflow_dispatch:  # Allows manual triggering
+  release:
+    types: [published]
+
+jobs:
+  update_json:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install requests
+
+    - name: Run the Python script to update AltStore JSON
+      run: |
+        python update_altstore_json.py
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add altstore_source.json
+        git commit -m "Update AltStore JSON with latest releases"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./  # Assuming you're publishing the root directory (adjust if needed)
