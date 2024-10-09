@@ -29,7 +29,7 @@ jobs:
         pip install -r main/requirements.txt  # Install requests
 
     - name: Run the script
-      run: python main/update_altsore.py  # Ensure the path is correct
+      run: python altstore/main/update_altsore.py
 
     - name: Commit and push changes
       run: |
