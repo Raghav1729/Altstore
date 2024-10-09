@@ -60,16 +60,15 @@ for repo, bundle_id in repositories.items():
 
     # Add version details for each release
     for release in releases:
-        for asset in release.get("assets", []):
-            version_data = {
-                "version": asset["name"].split('_')[1],  # Extract version from asset name
-                "date": release["published_at"],  # Release date
-                "localizedDescription": release["body"],  # Description from release notes
-                "minOSVersion": "14.0",  # Minimum OS version required
-                "downloadURL": asset["browser_download_url"],  # Download link for the asset
-                "size": asset["size"],  # Size of the asset
-            }
-            app_data["versions"].append(version_data)  # Append version data to app_data
+        version_data = {
+            "version": release["tag_name"],  # Use the tag name as the version
+            "date": release["published_at"],  # Release date
+            "localizedDescription": release["body"] if release["body"] else "",  # Use an empty string if body is empty or null
+            "minOSVersion": "14.0",  # Minimum OS version required
+            "downloadURL": release["assets"][0]["browser_download_url"] if release["assets"] else "",  # Download link for the first asset
+            "size": release["assets"][0]["size"] if release["assets"] else 0,  # Size of the first asset
+        }
+        app_data["versions"].append(version_data)  # Append version data to app_data
 
     # Append the app data to the apps list
     apps_json_structure["apps"].append(app_data)
