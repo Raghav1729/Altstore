@@ -13,8 +13,6 @@
     ],
     "apps": [
         {
-            "name": "BHTwitter",
-            "bundleIdentifier": "com.google.ios.youtube",
             "developerName": "Raghav1729",
             "localizedDescription": "Latest updates for BHTwitter.",
             "tintColor": "#5CA399",
@@ -59,11 +57,11 @@
                 }
             ],
             "subtitle": "Latest release information",
+            "name": "X",
+            "bundleIdentifier": "com.atebits.Tweetie2",
             "iconURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/BHTwitter.jpg"
         },
         {
-            "name": "uYouPlus",
-            "bundleIdentifier": "com.atebits.Tweetie2",
             "developerName": "Raghav1729",
             "localizedDescription": "Latest updates for uYouPlus.",
             "tintColor": "#5CA399",
@@ -158,6 +156,8 @@
                 }
             ],
             "subtitle": "Latest release information",
+            "name": "YouTube",
+            "bundleIdentifier": "com.google.ios.youtube",
             "iconURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/uYou.png"
         }
     ],
