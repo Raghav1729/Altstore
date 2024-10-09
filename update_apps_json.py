@@ -37,9 +37,15 @@ def get_releases(repo):
         response = requests.get(url)
         response.raise_for_status()  # Raise an error for bad responses
         return response.json()
-    except requests.RequestException as e:
+    except requests.exceptions.HTTPError as http_err:
+        print(f"HTTP error occurred for {repo}: {http_err}")
+    except requests.exceptions.ConnectionError:
+        print(f"Connection error occurred for {repo}.")
+    except requests.exceptions.Timeout:
+        print(f"Timeout error occurred for {repo}.")
+    except requests.exceptions.RequestException as e:
         print(f"Error fetching releases for {repo}: {e}")
-        return []
+    return []  # Return an empty list on error
 
 # Function to create app data from repository and releases
 def create_app_data(repo, bundle_id, releases):
@@ -48,7 +54,7 @@ def create_app_data(repo, bundle_id, releases):
         "bundleIdentifier": bundle_id,  # Set the bundle identifier from the dictionary
         "developerName": repo.split('/')[0],  # Get the developer name from the repo
         "localizedDescription": f"Latest updates for {repo.split('/')[-1]}.",  # Descriptive text for the app
-        "tintColor": "#5CA399",
+        "tintColor": "#5CA399",  # This can also be customized
         "screenshotURLs": [],  # Placeholder for screenshots
         "versions": [],  # List to hold version details
         "subtitle": "Latest release information",  # Subtitle for the app
@@ -56,7 +62,7 @@ def create_app_data(repo, bundle_id, releases):
 
     # Assign icon URL and screenshot URLs based on the repository
     if repo == "Raghav1729/uYouPlus":
-        app_data["iconURL"] = "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/uYou.png"  # Updated icon URL for uYouPlus
+        app_data["iconURL"] = "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/uYou.png"
         app_data["screenshotURLs"] = [
             "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus1.jpeg",
             "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus2.jpeg",
@@ -66,12 +72,12 @@ def create_app_data(repo, bundle_id, releases):
             "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus6.jpeg"
         ]
     elif repo == "Raghav1729/BHTwitter":
-        app_data["iconURL"] = "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/BHTwitter.jpg"  # Updated icon URL for BHTwitter
+        app_data["iconURL"] = "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/BHTwitter.jpg"
         app_data["screenshotURLs"] = [
-            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter1.jpeg",
-            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter2.jpeg",
-            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter3.jpeg",
-            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter4.jpeg"
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter1.png",
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter2.png", 
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter3.png",
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter4.png"
         ]
 
     # Add version details for each release
@@ -82,7 +88,7 @@ def create_app_data(repo, bundle_id, releases):
         version_data = {
             "version": release["tag_name"],  # Use the tag name as the version
             "date": release["published_at"],  # Release date
-            "localizedDescription": release["body"] or f"Latest updates for {repo.split('/')[-1]}.",  # Use fallback description if body is empty or null
+            "localizedDescription": release["body"] or f"Latest updates for {repo.split('/')[-1]}.",  # Fallback description
             "minOSVersion": "14.0",  # Minimum OS version required
             "downloadURL": release["assets"][0]["browser_download_url"],  # Download link for the first asset
             "size": release["assets"][0]["size"],  # Size of the first asset
