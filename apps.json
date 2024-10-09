@@ -3,7 +3,7 @@
     "identifier": "com.google.ios.youtube",
     "apiVersion": "v2",
     "subtitle": "A collection of apps for iOS.",
-    "description": "This repository contains a curated selection of iOS applications, including social media clients and utility apps. Each app is designed to enhance your mobile experience with features tailored for users seeking alternatives to the standard offerings. This source is automatically kept up-to-date through GitHub Actions and contributions from independent developers.",
+    "description": "This repository contains a curated selection of iOS applications, including social media clients and utility apps, kept up-to-date through GitHub Actions and contributions from independent developers.",
     "iconURL": "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
     "website": "https://github.com/Raghav1729",
     "tintColor": "#5CA399",
@@ -19,10 +19,12 @@
             "localizedDescription": "Latest updates for BHTwitter.",
             "tintColor": "#5CA399",
             "screenshotURLs": [
-                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter1.jpeg?raw=true",
-                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter2.jpeg?raw=true",
-                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter3.jpeg?raw=true",
-                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter4.jpeg?raw=true"
+                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter1.jpeg",
+                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter2.jpeg",
+                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter3.jpeg",
+                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter4.jpeg",
+                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter5.jpeg",
+                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter6.jpeg"
             ],
             "versions": [
                 {
@@ -59,7 +61,7 @@
                 }
             ],
             "subtitle": "Latest release information",
-            "iconURL": "https://github.com/Raghav1729/Altstore/blob/master/assets/icons/bhtwitter.jpg"
+            "iconURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/BHTwitter.jpg"
         },
         {
             "name": "uYouPlus",
@@ -68,12 +70,12 @@
             "localizedDescription": "Latest updates for uYouPlus.",
             "tintColor": "#5CA399",
             "screenshotURLs": [
-                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus1.jpeg?raw=true",
-                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus2.jpeg?raw=true",
-                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus3.jpeg?raw=true",
-                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus4.jpeg?raw=true",
-                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus5.jpeg?raw=true",
-                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus6.jpeg?raw=true"
+                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus1.jpeg",
+                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus2.jpeg",
+                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus3.jpeg",
+                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus4.jpeg",
+                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus5.jpeg",
+                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus6.jpeg"
             ],
             "versions": [
                 {
@@ -158,7 +160,7 @@
                 }
             ],
             "subtitle": "Latest release information",
-            "iconURL": "https://github.com/Raghav1729/Altstore/blob/master/assets/icons/uYou.png"
+            "iconURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/uYou.png"
         }
     ],
     "userinfo": {},
