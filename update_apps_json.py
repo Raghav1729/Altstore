@@ -188,15 +188,15 @@ def create_app_data(repo, releases):
             "privacy": [
                 {
                     "name": "Bluetooth",
-                    "usageDescription": "Bluetooth access is required to connect to external devices."
+                    "usageDescription": "Bluetooth access is needed for connecting to devices."
                 },
                 {
                     "name": "Calendars",
-                    "usageDescription": "Twitter needs access to your calendars for event scheduling."
+                    "usageDescription": "Access to your calendars is required for scheduling tweets."
                 },
                 {
                     "name": "Camera",
-                    "usageDescription": "This lets you take photos and videos directly from the app."
+                    "usageDescription": "Camera access is necessary for taking photos and videos directly from the app."
                 },
                 {
                     "name": "Face ID",
@@ -250,5 +250,8 @@ for repo in repositories:
     app_data = create_app_data(repo, releases)
     apps_json_structure["apps"].append(app_data)
 
-# Output the final apps.json structure
-print(json.dumps(apps_json_structure, indent=4))
+# Write to apps.json file
+with open("apps.json", "w") as f:
+    json.dump(apps_json_structure, f, indent=4)
+
+print("apps.json has been generated successfully.")
