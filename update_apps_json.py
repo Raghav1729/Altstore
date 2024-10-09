@@ -82,58 +82,49 @@ def create_app_data(repo, releases):
         
         app_data["appPermissions"] = {
             "entitlements": [
+                {"name": "get-task-allow"},
+                {"name": "aps-environment"},
+                {"name": "com.apple.developer.associated-domains"},
+                {"name": "com.apple.developer.coremedia.allow-alternate-video-decoder-selection"},
+                {"name": "com.apple.developer.device-information.user-assigned-device-name"},
+                {"name": "com.apple.developer.networking.multicast"},
                 {"name": "com.apple.developer.networking.wifi-info"},
+                {"name": "com.apple.developer.usernotifications.time-sensitive"},
                 {"name": "com.apple.security.application-groups"},
                 {"name": "keychain-access-groups"}
             ],
             "privacy": [
                 {
-                    "name": "Purchases",
-                    "usageDescription": "Data related to purchases may be collected."
+                    "name": "AppleMusic",
+                    "usageDescription": "This lets you add your own audio files to your videos."
                 },
                 {
-                    "name": "Financial Info",
-                    "usageDescription": "Financial data may be collected for analytics."
+                    "name": "BluetoothPeripheral",
+                    "usageDescription": "YouTube needs bluetooth access to scan for nearby Cast devices."
                 },
                 {
-                    "name": "Location",
-                    "usageDescription": "Location data may be collected for personalization."
-                },
-                {
-                    "name": "Contact Info",
-                    "usageDescription": "Contact information may be collected and linked."
+                    "name": "Camera",
+                    "usageDescription": "This lets you create videos using the app."
                 },
                 {
                     "name": "Contacts",
-                    "usageDescription": "Contacts may be accessed for improved recommendations."
+                    "usageDescription": "Your contacts will be sent to YouTube servers to help you find friends to share videos with."
                 },
                 {
-                    "name": "User Content",
-                    "usageDescription": "User-generated content may be used for service improvement."
+                    "name": "LocalNetwork",
+                    "usageDescription": "Access to your network allows YouTube to discover and connect to devices such as your TV."
                 },
                 {
-                    "name": "Search History",
-                    "usageDescription": "Search history may be linked to your identity."
+                    "name": "LocationWhenInUse",
+                    "usageDescription": "Makes it easier for you to attach location information to your videos and live streams and allows for features such as improved recommendations and ads."
                 },
                 {
-                    "name": "Browsing History",
-                    "usageDescription": "Browsing history may be linked to your identity."
+                    "name": "Microphone",
+                    "usageDescription": "This lets you include audio with your videos and search using your voice."
                 },
                 {
-                    "name": "Identifiers",
-                    "usageDescription": "Identifiers may be used to track users across apps."
-                },
-                {
-                    "name": "Usage Data",
-                    "usageDescription": "Usage data helps YouTube improve its services."
-                },
-                {
-                    "name": "Diagnostics",
-                    "usageDescription": "Diagnostics data may be collected."
-                },
-                {
-                    "name": "Other Data",
-                    "usageDescription": "Other data may be collected but not linked."
+                    "name": "PhotoLibrary",
+                    "usageDescription": "This lets you upload media you've already created."
                 }
             ]
         }
@@ -185,91 +176,79 @@ def create_app_data(repo, releases):
         
         app_data["appPermissions"] = {
             "entitlements": [
-                {"name": "com.apple.developer.networking.wifi-info"},
-                {"name": "com.apple.security.application-groups"},
-                {"name": "keychain-access-groups"}
+                {"name": "com.apple.developer.devicecheck.ap-pattest-environment"},
+                {"name": "com.apple.developer.associated-domains"},
+                {"name": "com.apple.developer.replace-plugin"},
+                {"name": "com.apple.developer.usernotifications.communication"},
+                {"name": "com.apple.developer.usernotifications.time-sensitive"},
+                {"name": "aps-environment"},
+                {"name": "com.apple.developer.applesignin"},
+                {"name": "com.apple.developer.siri"}
             ],
             "privacy": [
                 {
-                    "name": "Purchases",
-                    "usageDescription": "Data related to purchases may be collected."
+                    "name": "Bluetooth",
+                    "usageDescription": "Bluetooth access is required to connect to external devices."
                 },
                 {
-                    "name": "Location",
-                    "usageDescription": "Location data may be linked to your identity."
+                    "name": "Calendars",
+                    "usageDescription": "Twitter needs access to your calendars for event scheduling."
                 },
                 {
-                    "name": "Contact Info",
-                    "usageDescription": "Contact information may be collected and linked."
+                    "name": "Camera",
+                    "usageDescription": "This lets you take photos and videos directly from the app."
                 },
                 {
-                    "name": "Contacts",
-                    "usageDescription": "Contacts may be accessed for improved recommendations."
+                    "name": "Face ID",
+                    "usageDescription": "Face ID is used for secure logins."
                 },
                 {
-                    "name": "User Content",
-                    "usageDescription": "User-generated content may be used for service improvement."
+                    "name": "LocalNetwork",
+                    "usageDescription": "Access to your local network is needed for discovering devices."
                 },
                 {
-                    "name": "Search History",
-                    "usageDescription": "Search history may be linked to your identity."
+                    "name": "LocationWhenInUse",
+                    "usageDescription": "Location access is necessary to provide tailored experiences."
                 },
                 {
-                    "name": "Browsing History",
-                    "usageDescription": "Browsing history may be linked to your identity."
+                    "name": "Microphone",
+                    "usageDescription": "Microphone access is required for voice tweets."
                 },
                 {
-                    "name": "Identifiers",
-                    "usageDescription": "Identifiers may be used to track users across apps."
+                    "name": "PhotoLibraryAdd",
+                    "usageDescription": "Access to your photo library is needed for uploading images."
                 },
                 {
-                    "name": "Usage Data",
-                    "usageDescription": "Usage data helps Twitter improve its services."
+                    "name": "PhotoLibrary",
+                    "usageDescription": "Twitter may access your photo library to share photos."
                 },
                 {
-                    "name": "Diagnostics",
-                    "usageDescription": "Diagnostics data may be collected."
+                    "name": "SpeechRecognition",
+                    "usageDescription": "Speech recognition is required for voice commands."
                 },
                 {
-                    "name": "Other Data",
-                    "usageDescription": "Other data may be collected but not linked."
+                    "name": "UserTracking",
+                    "usageDescription": "User tracking helps Twitter provide personalized content."
                 }
             ]
         }
 
-    # Add version details for each release
+    # Add the releases to the app data
     for release in releases:
-        if not release.get("assets"):  # Skip if there are no assets
-            continue
-
-        version_data = {
-            "version": (
-                release["tag_name"].lstrip("v").split('-')[1] if repo == "Raghav1729/BHTwitter" 
-                else release["tag_name"].lstrip("v").split('-')[0]
-            ),  # Remove 'v' and extract version; use index 1 for BHTwitter and index 0 for uYouPlus
-            "date": release["published_at"],  # Release date
-            "localizedDescription": release["body"] if release["body"] else "",  # Set to empty if body is null
-            "downloadURL": release["assets"][0]["browser_download_url"],  # Use the first asset's download URL
-            "size": release["assets"][0]["size"]  # File size of the first asset
+        version_info = {
+            "version": release["tag_name"],
+            "notes": release["body"],
+            "downloadURL": release["assets"][0]["url"] if release["assets"] else None
         }
-        app_data["versions"].append(version_data)
+        app_data["versions"].append(version_info)
 
     return app_data
 
-# Main function to populate apps.json structure
-def populate_apps_json():
-    for repo in repositories:
-        releases = get_releases(repo)  # Fetch releases for the repository
-        app_data = create_app_data(repo, releases)  # Create app data from the releases
-        apps_json_structure["apps"].append(app_data)  # Append app data to the main structure
+# Loop through the repositories and populate the apps array
+for repo in repositories:
+    releases = get_releases(repo)
+    app_data = create_app_data(repo, releases)
+    apps_json_structure["apps"].append(app_data)
 
-    return apps_json_structure
-
-# Generate apps.json
-apps_json = populate_apps_json()
-
-# Write to apps.json file
-with open("apps.json", "w") as f:
-    json.dump(apps_json, f, indent=4)
-
-print("apps.json has been generated successfully.")
+# Output the final apps.json structure
+print(json.dumps(apps_json_structure, indent=4))
