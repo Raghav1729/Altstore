@@ -1,106 +1,168 @@
-import requests
-import json
-
-# Define the repositories with their corresponding bundle identifiers
-repositories = {
-    "Raghav1729/BHTwitter": "com.google.ios.youtube",
-    "Raghav1729/uYouPlus": "com.atebits.Tweetie2"
-}
-
-# Prepare the updated base structure for apps.json
-apps_json_structure = {
-    "name": "Raghav Repository",  # Updated repository name
-    "identifier": "com.google.ios.youtube",  # Identifier for the repository
+{
+    "name": "Raghav Repository",
+    "identifier": "com.google.ios.youtube",
     "apiVersion": "v2",
-    "subtitle": "A collection of apps for iOS.",  # Updated subtitle
-    "description": (
-        "This repository contains a curated selection of iOS applications, "
-        "including social media clients and utility apps. Each app is designed "
-        "to enhance your mobile experience with features tailored for users "
-        "seeking alternatives to the standard offerings. This source is automatically "
-        "kept up-to-date through GitHub Actions and contributions from independent developers."
-    ),
-    "iconURL": "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",  # Updated icon URL
-    "website": "https://github.com/Raghav1729",  # Updated website link
-    "tintColor": "#5CA399",  # Color for tinting
+    "subtitle": "A collection of apps for iOS.",
+    "description": "This repository contains a curated selection of iOS applications, including social media clients and utility apps. Each app is designed to enhance your mobile experience with features tailored for users seeking alternatives to the standard offerings. This source is automatically kept up-to-date through GitHub Actions and contributions from independent developers.",
+    "iconURL": "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
+    "website": "https://github.com/Raghav1729",
+    "tintColor": "#5CA399",
     "featuredApps": [
         "com.google.ios.youtube",
         "com.atebits.Tweetie2"
     ],
-    "apps": [],  # This will be populated dynamically
-    "userinfo": {},  # Placeholder for user info
-    "news": []  # Placeholder for news updates
-}
-
-# Function to get releases from a repository
-def get_releases(repo):
-    url = f"https://api.github.com/repos/{repo}/releases"
-    try:
-        response = requests.get(url)
-        response.raise_for_status()  # Raise an error for bad responses
-        return response.json()
-    except requests.RequestException as e:
-        print(f"Error fetching releases for {repo}: {e}")
-        return []
-
-# Function to create app data from repository and releases
-def create_app_data(repo, bundle_id, releases):
-    app_data = {
-        "name": repo.split('/')[-1],  # Use the repo name as the app name
-        "bundleIdentifier": bundle_id,  # Set the bundle identifier from the dictionary
-        "developerName": repo.split('/')[0],  # Get the developer name from the repo
-        "localizedDescription": f"Latest updates for {repo.split('/')[-1]}.",  # Descriptive text for the app
-        "tintColor": "#5CA399",  # This can also be customized
-        "screenshotURLs": [],  # Placeholder for screenshots
-        "versions": [],  # List to hold version details
-        "subtitle": "Latest release information",  # Subtitle for the app
-    }
-
-    # Assign icon URL and screenshot URLs based on the repository
-    if repo == "Raghav1729/uYouPlus":
-        app_data["iconURL"] = "https://github.com/Raghav1729/Altstore/blob/master/assets/icons/uYou.png"  # Updated icon URL for uYouPlus
-        app_data["screenshotURLs"] = [
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus1.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus2.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus3.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus4.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus5.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus6.jpeg?raw=true"
-        ]
-    elif repo == "Raghav1729/BHTwitter":
-        app_data["iconURL"] = "https://github.com/Raghav1729/Altstore/blob/master/assets/icons/bhtwitter.jpg"  # Updated icon URL for BHTwitter
-        app_data["screenshotURLs"] = [
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter1.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter2.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter3.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter4.jpeg?raw=true"
-        ]
-
-    # Add version details for each release
-    for release in releases:
-        if not release.get("assets"):  # Skip if there are no assets
-            continue
-
-        version_data = {
-            "version": release["tag_name"],  # Use the tag name as the version
-            "date": release["published_at"],  # Release date
-            "localizedDescription": release["body"] or f"Latest updates for {repo.split('/')[-1]}.",  # Use fallback description if body is empty or null
-            "minOSVersion": "14.0",  # Minimum OS version required
-            "downloadURL": release["assets"][0]["browser_download_url"],  # Download link for the first asset
-            "size": release["assets"][0]["size"],  # Size of the first asset
+    "apps": [
+        {
+            "name": "BHTwitter",
+            "bundleIdentifier": "com.google.ios.youtube",
+            "developerName": "Raghav1729",
+            "localizedDescription": "Latest updates for BHTwitter.",
+            "iconURL": "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
+            "tintColor": "#5CA399",
+            "screenshotURLs": [
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter1.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter2.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter3.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter4.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter5.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter6.jpeg?raw=true"
+            ],
+            "versions": [
+                {
+                    "version": "v4.3-10.62",
+                    "date": "2024-10-08T17:30:57Z",
+                    "localizedDescription": "",
+                    "minOSVersion": "14.0",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.62/BHTwitter-sideloaded_4.3_10.62.ipa",
+                    "size": 146799700
+                },
+                {
+                    "version": "v4.3-10.61.2",
+                    "date": "2024-10-07T03:58:19Z",
+                    "localizedDescription": "",
+                    "minOSVersion": "14.0",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.61.2/BHTwitter-sideloaded_4.3_10.61.2.ipa",
+                    "size": 146770569
+                },
+                {
+                    "version": "v4.3-10.61",
+                    "date": "2024-10-01T05:42:55Z",
+                    "localizedDescription": "",
+                    "minOSVersion": "14.0",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.61/BHTwitter-sideloaded_4.3_10.61.ipa",
+                    "size": 146763198
+                },
+                {
+                    "version": "v4.3-10.60",
+                    "date": "2024-09-27T14:52:42Z",
+                    "localizedDescription": "",
+                    "minOSVersion": "14.0",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.60/BHTwitter-sideloaded_4.3_10.60.ipa",
+                    "size": 146538707
+                }
+            ],
+            "subtitle": "Latest release information"
+        },
+        {
+            "name": "uYouPlus",
+            "bundleIdentifier": "com.atebits.Tweetie2",
+            "developerName": "Raghav1729",
+            "localizedDescription": "Latest updates for uYouPlus.",
+            "iconURL": "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
+            "tintColor": "#5CA399",
+            "screenshotURLs": [
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus1.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus2.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus3.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus4.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus5.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus6.jpeg?raw=true"
+            ],
+            "versions": [
+                {
+                    "version": "v19.40.4-3.0.4",
+                    "date": "2024-10-07T03:59:34Z",
+                    "localizedDescription": "",
+                    "minOSVersion": "14.0",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.40.4-3.0.4/uYouPlus_19.40.4-3.0.4.ipa",
+                    "size": 120798752
+                },
+                {
+                    "version": "v19.39.1-3.0.4",
+                    "date": "2024-10-01T05:50:02Z",
+                    "localizedDescription": "",
+                    "minOSVersion": "14.0",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.39.1-3.0.4/uYouPlus_19.39.1-3.0.4.ipa",
+                    "size": 120732542
+                },
+                {
+                    "version": "v19.38.2-3.0.3",
+                    "date": "2024-09-27T13:33:14Z",
+                    "localizedDescription": "",
+                    "minOSVersion": "14.0",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.38.2-3.0.3/uYouPlus_19.38.2-3.0.3.ipa",
+                    "size": 120294068
+                },
+                {
+                    "version": "v19.37.2-3.0.4",
+                    "date": "2024-09-17T04:02:43Z",
+                    "localizedDescription": "**Full Changelog**: https://github.com/Raghav1729/uYouPlus/compare/v19.36.1-3.0.4...v19.37.2-3.0.4",
+                    "minOSVersion": "14.0",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.37.2-3.0.4/uYouPlus_19.37.2-3.0.4.ipa",
+                    "size": 120161517
+                },
+                {
+                    "version": "v19.36.1-3.0.4",
+                    "date": "2024-09-10T06:18:06Z",
+                    "localizedDescription": "",
+                    "minOSVersion": "14.0",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.36.1-3.0.4/uYouPlus_19.36.1-3.0.4.ipa",
+                    "size": 119960558
+                },
+                {
+                    "version": "v19.35.3-3.0.4",
+                    "date": "2024-09-03T05:46:40Z",
+                    "localizedDescription": "",
+                    "minOSVersion": "14.0",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.35.3-3.0.4/uYouPlus_19.35.3-3.0.4.ipa",
+                    "size": 119619261
+                },
+                {
+                    "version": "v19.34.2-3.0.4",
+                    "date": "2024-08-27T03:20:09Z",
+                    "localizedDescription": "",
+                    "minOSVersion": "14.0",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.34.2-3.0.4/uYouPlus_19.34.2-3.0.4.ipa",
+                    "size": 119174258
+                },
+                {
+                    "version": "v19.33.2-3.0.4",
+                    "date": "2024-08-19T17:24:56Z",
+                    "localizedDescription": "",
+                    "minOSVersion": "14.0",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.33.2-3.0.4/uYouPlus_19.33.2-3.0.4.ipa",
+                    "size": 118812125
+                },
+                {
+                    "version": "v19.32.8-3.0.4",
+                    "date": "2024-08-14T04:37:55Z",
+                    "localizedDescription": "",
+                    "minOSVersion": "14.0",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.32.8-3.0.4/uYouPlus_19.32.8-3.0.4.ipa",
+                    "size": 118377247
+                },
+                {
+                    "version": "v19.30.2-3.0.4",
+                    "date": "2024-08-06T04:09:37Z",
+                    "localizedDescription": "",
+                    "minOSVersion": "14.0",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.30.2-3.0.4/uYouPlus_19.30.2-3.0.4.ipa",
+                    "size": 118078070
+                }
+            ],
+            "subtitle": "Latest release information"
         }
-        app_data["versions"].append(version_data)  # Append version data to app_data
-
-    return app_data  # Return the created app data
-
-# Fetch releases and build the apps section
-for repo, bundle_id in repositories.items():
-    releases = get_releases(repo)
-    app_data = create_app_data(repo, bundle_id, releases)  # Create app data
-    apps_json_structure["apps"].append(app_data)  # Append the app data to the apps list
-
-# Write the updated structure to apps.json
-with open('apps.json', 'w') as f:
-    json.dump(apps_json_structure, f, indent=4)
-
-print("apps.json updated successfully!")
+    ],
+    "userinfo": {},
+    "news": []
+}
