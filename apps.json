@@ -60,6 +60,20 @@
             "name": "X",
             "bundleIdentifier": "com.atebits.Tweetie2",
             "iconURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/BHTwitter.jpg",
+            "screenshots": [
+                {
+                    "imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter1.png"
+                },
+                {
+                    "imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter2.png"
+                },
+                {
+                    "imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter3.png"
+                },
+                {
+                    "imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter4.png"
+                }
+            ],
             "permissions": [
                 {
                     "type": "photos",
@@ -88,12 +102,12 @@
             "localizedDescription": "Latest updates for uYouPlus.",
             "tintColor": "#5CA399",
             "screenshotURLs": [
-                "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus1.jpeg?raw=true",
-                "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus2.jpeg?raw=true",
-                "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus3.jpeg?raw=true",
-                "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus4.jpeg?raw=true",
-                "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus5.jpeg?raw=true",
-                "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus6.jpeg?raw=true"
+                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus1.jpeg",
+                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus2.jpeg",
+                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus3.jpeg",
+                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus4.jpeg",
+                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus5.jpeg",
+                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus6.jpeg"
             ],
             "versions": [
                 {
@@ -183,22 +197,22 @@
             "iconURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/uYou.png",
             "screenshots": [
                 {
-                    "imageURL": "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus1.jpeg?raw=true"
+                    "imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus1.jpeg"
                 },
                 {
-                    "imageURL": "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus2.jpeg?raw=true"
+                    "imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus2.jpeg"
                 },
                 {
-                    "imageURL": "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus3.jpeg?raw=true"
+                    "imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus3.jpeg"
                 },
                 {
-                    "imageURL": "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus4.jpeg?raw=true"
+                    "imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus4.jpeg"
                 },
                 {
-                    "imageURL": "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus5.jpeg?raw=true"
+                    "imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus5.jpeg"
                 },
                 {
-                    "imageURL": "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus6.jpeg?raw=true"
+                    "imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus6.jpeg"
                 }
             ],
             "permissions": [
