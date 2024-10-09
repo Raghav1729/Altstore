@@ -1,26 +1,26 @@
 import requests
 import json
 
-# Define the repositories and their respective bundle identifiers
+# Define the repositories with their corresponding bundle identifiers
 repositories = {
-    "Raghav1729/BHTwitter": "com.raghav1729.bhtwitter",
-    "Raghav1729/uYouPlus": "com.raghav1729.uYouPlus"
+    "Raghav1729/BHTwitter": "com.google.ios.youtube",
+    "Raghav1729/uYouPlus": "com.atebits.Tweetie2"
 }
 
 # Prepare the base structure for apps.json
 apps_json_structure = {
     "name": "Raghav Sources",
-    "identifier": "com.google.ios.youtube",  # Keeping the identifier as requested
+    "identifier": "com.google.ios.youtube",
     "apiVersion": "v2",
-    "subtitle": "Contains all of build by me",
+    "subtitle": "Contains all of your favorite emulators, games, jailbreaks, utilities, and more.",
     "description": "This source is an automatically kept up-to-date source, powered by GitHub Actions, the Python altparse library, and the support of independent developers. In here, you'll find anything from community maintained forks of Delta Emulator, to tiny Mac utilities that no one's ever heard of. If you have an app you'd like to see here, please use our website to reach out!",
-    "iconURL": "",  # Removed generic icon URL
-    "headerURL": "",  # Removed generic header URL
-    "website": "",  # Removed generic website URL
+    "iconURL": "",  # Placeholder for generic icon image
+    "headerURL": "",  # Placeholder for generic header image
+    "website": "",  # Placeholder for website link
     "tintColor": "#343a40",
     "featuredApps": [
-        "com.raghav1729.bhtwitter",  # Updated bundle identifier for BHTwitter
-        "com.raghav1729.uYouPlus",    # Updated bundle identifier for uYouPlus
+        "com.google.ios.youtube",
+        "com.atebits.Tweetie2",
     ],
     "apps": [],
     "userinfo": {}
@@ -34,17 +34,17 @@ def get_releases(repo):
     return response.json()
 
 # Fetch releases and build the apps section
-for repo, bundle_identifier in repositories.items():
+for repo, bundle_id in repositories.items():
     releases = get_releases(repo)
     
     # Create an app entry for each repository
     app_data = {
         "name": repo.split('/')[-1],  # Use the repo name as the app name
-        "bundleIdentifier": bundle_identifier,  # Set the specific bundle identifier
+        "bundleIdentifier": bundle_id,  # Set the bundle identifier from the dictionary
         "developerName": repo.split('/')[0],
         "subtitle": "Latest release information",
         "localizedDescription": f"Latest releases for {repo.split('/')[-1]}.",
-        "iconURL": "",  # Removed generic icon URL
+        "iconURL": "",  # Generic icon URL
         "tintColor": "#5CA399",
         "screenshotURLs": [],
         "versions": [],
