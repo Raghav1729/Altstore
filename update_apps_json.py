@@ -53,20 +53,20 @@ def create_app_data(repo, releases):
         app_data["bundleIdentifier"] = "com.google.ios.youtube"
         app_data["iconURL"] = "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/uYou.png"
         app_data["screenshotURLs"] = [
-            "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus1.jpeg?raw=true",
-            "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus2.jpeg?raw=true",
-            "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus3.jpeg?raw=true",
-            "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus4.jpeg?raw=true",
-            "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus5.jpeg?raw=true",
-            "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus6.jpeg?raw=true"
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus1.jpeg",
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus2.jpeg",
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus3.jpeg",
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus4.jpeg",
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus5.jpeg",
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus6.jpeg"
         ]
         app_data["screenshots"] = [
-            {"imageURL": "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus1.jpeg?raw=true"},
-            {"imageURL": "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus2.jpeg?raw=true"},
-            {"imageURL": "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus3.jpeg?raw=true"},
-            {"imageURL": "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus4.jpeg?raw=true"},
-            {"imageURL": "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus5.jpeg?raw=true"},
-            {"imageURL": "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus6.jpeg?raw=true"}
+            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus1.jpeg"},
+            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus2.jpeg"},
+            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus3.jpeg"},
+            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus4.jpeg"},
+            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus5.jpeg"},
+            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus6.jpeg"}
         ]
         app_data["permissions"] = [
             {"type": "photos", "usageDescription": "Allows YouTube to upload media from your photo library."},
@@ -103,9 +103,15 @@ def create_app_data(repo, releases):
         app_data["iconURL"] = "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/BHTwitter.jpg"
         app_data["screenshotURLs"] = [
             "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter1.png",
-            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter2.png", 
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter2.png",
             "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter3.png",
             "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter4.png"
+        ]
+        app_data["screenshots"] = [
+            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter1.png"},
+            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter2.png"},
+            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter3.png"},
+            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter4.png"}
         ]
         app_data["permissions"] = [
             {"type": "photos", "usageDescription": "Allows X to access media from your photo library."}
