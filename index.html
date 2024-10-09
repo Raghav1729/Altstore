@@ -1,1 +1,53 @@
+<!-- 
+    index.html
+    altsource-viewer (https://github.com/therealFoxster/altsource-viewer)
 
+    Copyright (c) 2023 Foxster.
+    MIT License.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./common/style.css">
+  <link rel="stylesheet" href="index.css">
+  <title>AltSource Viewer</title>
+</head>
+<body>
+  <div id="top">
+    <div id="nav-bar" class="hide-border">
+      <a href="https://github.com/therealFoxster/altsource-viewer" class="hidden">
+        Source Code
+      </a>
+      <div id="title" class="hidden">
+          <p>AltSource Viewer</p>
+      </div>
+      <a href="https://github.com/therealFoxster/altsource-viewer">
+        Source Code
+      </a>
+    </div>
+  </div>
+  <div id="main">
+    <h1 id="title">AltSource Viewer</h1>
+    <div class="textfield">
+      <input type="url" placeholder="Source URL">
+      <a id="go">Go</a>
+    </div>
+    <div id="suggestions" class="section">
+      <div class="header">
+        <h2>Featured</h2>
+      </div>
+      <!-- <a href="https://github.com/therealFoxster/altsource-viewer" target="_blank">
+        <div class="suggestion" id="source-code">
+          <i class="bi bi-code-slash"></i>
+          Source Code
+        </div>
+      </a> -->
+    </div>
+  </div>
+  <script src="index.js" type="module"></script>
+</body>
+</html>
