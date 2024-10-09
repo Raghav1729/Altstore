@@ -3,10 +3,9 @@
     "identifier": "com.google.ios.youtube",
     "apiVersion": "v2",
     "subtitle": "A collection of apps for iOS.",
-    "description": "This source is an automatically kept up-to-date source, powered by GitHub Actions, the Python altparse library, and the support of independent developers. In here, you'll find anything from community maintained forks of Delta Emulator to tiny Mac utilities that no one's ever heard of. If you have an app you'd like to see here, please use our website to reach out!",
-    "iconURL": "https://example.com/icon.png",
-    "headerURL": "https://example.com/header.png",
-    "website": "https://example.com",
+    "description": "This repository contains a curated selection of iOS applications, including social media clients and utility apps. Each app is designed to enhance your mobile experience with features tailored for users seeking alternatives to the standard offerings. This source is automatically kept up-to-date through GitHub Actions and contributions from independent developers.",
+    "iconURL": "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
+    "website": "https://github.com/Raghav1729",
     "tintColor": "#5CA399",
     "featuredApps": [
         "com.google.ios.youtube",
@@ -18,11 +17,15 @@
             "bundleIdentifier": "com.google.ios.youtube",
             "developerName": "Raghav1729",
             "localizedDescription": "Latest updates for BHTwitter.",
-            "iconURL": "https://example.com/default_icon.png",
+            "iconURL": "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
             "tintColor": "#5CA399",
             "screenshotURLs": [
-                "https://example.com/screenshot1.png",
-                "https://example.com/screenshot2.png"
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter1.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter2.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter3.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter4.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter5.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter6.jpeg?raw=true"
             ],
             "versions": [
                 {
@@ -65,11 +68,15 @@
             "bundleIdentifier": "com.atebits.Tweetie2",
             "developerName": "Raghav1729",
             "localizedDescription": "Latest updates for uYouPlus.",
-            "iconURL": "https://example.com/default_icon.png",
+            "iconURL": "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
             "tintColor": "#5CA399",
             "screenshotURLs": [
-                "https://example.com/screenshot1.png",
-                "https://example.com/screenshot2.png"
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus1.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus2.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus3.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus4.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus5.jpeg?raw=true",
+                "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus6.jpeg?raw=true"
             ],
             "versions": [
                 {
