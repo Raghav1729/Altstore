@@ -16,44 +16,31 @@
             "developerName": "Raghav1729",
             "localizedDescription": "Latest updates for BHTwitter.",
             "tintColor": "#5CA399",
-            "screenshotURLs": [
-                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter1.png",
-                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter2.png",
-                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter3.png",
-                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter4.png"
-            ],
+            "screenshotURLs": [],
             "versions": [
                 {
-                    "version": "10.62",
+                    "version": "4.3",
                     "date": "2024-10-08T17:30:57Z",
-                    "localizedDescription": "Latest updates for BHTwitter.",
-                    "minOSVersion": "14.0",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.62/BHTwitter-sideloaded_4.3_10.62.ipa",
-                    "size": 146799700
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.62/BHTwitter-sideloaded_4.3_10.62.ipa"
                 },
                 {
-                    "version": "10.61.2",
+                    "version": "4.3",
                     "date": "2024-10-07T03:58:19Z",
-                    "localizedDescription": "Latest updates for BHTwitter.",
-                    "minOSVersion": "14.0",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.61.2/BHTwitter-sideloaded_4.3_10.61.2.ipa",
-                    "size": 146770569
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.61.2/BHTwitter-sideloaded_4.3_10.61.2.ipa"
                 },
                 {
-                    "version": "10.61",
+                    "version": "4.3",
                     "date": "2024-10-01T05:42:55Z",
-                    "localizedDescription": "Latest updates for BHTwitter.",
-                    "minOSVersion": "14.0",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.61/BHTwitter-sideloaded_4.3_10.61.ipa",
-                    "size": 146763198
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.61/BHTwitter-sideloaded_4.3_10.61.ipa"
                 },
                 {
-                    "version": "10.60",
+                    "version": "4.3",
                     "date": "2024-09-27T14:52:42Z",
-                    "localizedDescription": "Latest updates for BHTwitter.",
-                    "minOSVersion": "14.0",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.60/BHTwitter-sideloaded_4.3_10.60.ipa",
-                    "size": 146538707
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.60/BHTwitter-sideloaded_4.3_10.60.ipa"
                 }
             ],
             "subtitle": "Latest release information",
@@ -76,23 +63,90 @@
             ],
             "permissions": [
                 {
-                    "type": "photos",
-                    "usageDescription": "Allows X to access media from your photo library."
+                    "type": "purchases",
+                    "usageDescription": "Twitter collects data related to your purchases for better ad targeting."
+                },
+                {
+                    "type": "location",
+                    "usageDescription": "Twitter uses location data for tailored content and advertisements."
+                },
+                {
+                    "type": "contact-info",
+                    "usageDescription": "Twitter accesses your contact info to help connect you with others."
+                },
+                {
+                    "type": "user-content",
+                    "usageDescription": "User-generated content may be used for service improvement."
+                },
+                {
+                    "type": "browsing-history",
+                    "usageDescription": "Browsing history is used for personalized content."
+                },
+                {
+                    "type": "identifiers",
+                    "usageDescription": "Identifiers are used for tracking across applications."
+                },
+                {
+                    "type": "usage-data",
+                    "usageDescription": "Usage data helps Twitter improve its services."
                 }
             ],
             "appPermissions": {
                 "entitlements": [
                     {
-                        "name": "get-task-allow"
+                        "name": "com.apple.developer.networking.wifi-info"
                     },
                     {
-                        "name": "aps-environment"
+                        "name": "com.apple.security.application-groups"
+                    },
+                    {
+                        "name": "keychain-access-groups"
                     }
                 ],
                 "privacy": [
                     {
-                        "name": "LocationWhenInUse",
-                        "usageDescription": "Allows X to attach location to tweets."
+                        "name": "Purchases",
+                        "usageDescription": "Data related to purchases may be collected."
+                    },
+                    {
+                        "name": "Location",
+                        "usageDescription": "Location data may be linked to your identity."
+                    },
+                    {
+                        "name": "Contact Info",
+                        "usageDescription": "Contact information may be collected and linked."
+                    },
+                    {
+                        "name": "Contacts",
+                        "usageDescription": "Contacts may be accessed for improved recommendations."
+                    },
+                    {
+                        "name": "User Content",
+                        "usageDescription": "User-generated content may be used for service improvement."
+                    },
+                    {
+                        "name": "Search History",
+                        "usageDescription": "Search history may be linked to your identity."
+                    },
+                    {
+                        "name": "Browsing History",
+                        "usageDescription": "Browsing history may be linked to your identity."
+                    },
+                    {
+                        "name": "Identifiers",
+                        "usageDescription": "Identifiers may be used to track users across apps."
+                    },
+                    {
+                        "name": "Usage Data",
+                        "usageDescription": "Usage data helps Twitter improve its services."
+                    },
+                    {
+                        "name": "Diagnostics",
+                        "usageDescription": "Diagnostics data may be collected."
+                    },
+                    {
+                        "name": "Other Data",
+                        "usageDescription": "Other data may be collected but not linked."
                     }
                 ]
             }
@@ -101,94 +155,67 @@
             "developerName": "Raghav1729",
             "localizedDescription": "Latest updates for uYouPlus.",
             "tintColor": "#5CA399",
-            "screenshotURLs": [
-                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus1.jpeg",
-                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus2.jpeg",
-                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus3.jpeg",
-                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus4.jpeg",
-                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus5.jpeg",
-                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus6.jpeg"
-            ],
+            "screenshotURLs": [],
             "versions": [
                 {
                     "version": "19.40.4",
                     "date": "2024-10-07T03:59:34Z",
-                    "localizedDescription": "Latest updates for uYouPlus.",
-                    "minOSVersion": "14.0",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.40.4-3.0.4/uYouPlus_19.40.4-3.0.4.ipa",
-                    "size": 120798752
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.40.4-3.0.4/uYouPlus_19.40.4-3.0.4.ipa"
                 },
                 {
                     "version": "19.39.1",
                     "date": "2024-10-01T05:50:02Z",
-                    "localizedDescription": "Latest updates for uYouPlus.",
-                    "minOSVersion": "14.0",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.39.1-3.0.4/uYouPlus_19.39.1-3.0.4.ipa",
-                    "size": 120732542
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.39.1-3.0.4/uYouPlus_19.39.1-3.0.4.ipa"
                 },
                 {
                     "version": "19.38.2",
                     "date": "2024-09-27T13:33:14Z",
-                    "localizedDescription": "Latest updates for uYouPlus.",
-                    "minOSVersion": "14.0",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.38.2-3.0.3/uYouPlus_19.38.2-3.0.3.ipa",
-                    "size": 120294068
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.38.2-3.0.3/uYouPlus_19.38.2-3.0.3.ipa"
                 },
                 {
                     "version": "19.37.2",
                     "date": "2024-09-17T04:02:43Z",
                     "localizedDescription": "**Full Changelog**: https://github.com/Raghav1729/uYouPlus/compare/v19.36.1-3.0.4...v19.37.2-3.0.4",
-                    "minOSVersion": "14.0",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.37.2-3.0.4/uYouPlus_19.37.2-3.0.4.ipa",
-                    "size": 120161517
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.37.2-3.0.4/uYouPlus_19.37.2-3.0.4.ipa"
                 },
                 {
                     "version": "19.36.1",
                     "date": "2024-09-10T06:18:06Z",
-                    "localizedDescription": "Latest updates for uYouPlus.",
-                    "minOSVersion": "14.0",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.36.1-3.0.4/uYouPlus_19.36.1-3.0.4.ipa",
-                    "size": 119960558
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.36.1-3.0.4/uYouPlus_19.36.1-3.0.4.ipa"
                 },
                 {
                     "version": "19.35.3",
                     "date": "2024-09-03T05:46:40Z",
-                    "localizedDescription": "Latest updates for uYouPlus.",
-                    "minOSVersion": "14.0",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.35.3-3.0.4/uYouPlus_19.35.3-3.0.4.ipa",
-                    "size": 119619261
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.35.3-3.0.4/uYouPlus_19.35.3-3.0.4.ipa"
                 },
                 {
                     "version": "19.34.2",
                     "date": "2024-08-27T03:20:09Z",
-                    "localizedDescription": "Latest updates for uYouPlus.",
-                    "minOSVersion": "14.0",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.34.2-3.0.4/uYouPlus_19.34.2-3.0.4.ipa",
-                    "size": 119174258
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.34.2-3.0.4/uYouPlus_19.34.2-3.0.4.ipa"
                 },
                 {
                     "version": "19.33.2",
                     "date": "2024-08-19T17:24:56Z",
-                    "localizedDescription": "Latest updates for uYouPlus.",
-                    "minOSVersion": "14.0",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.33.2-3.0.4/uYouPlus_19.33.2-3.0.4.ipa",
-                    "size": 118812125
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.33.2-3.0.4/uYouPlus_19.33.2-3.0.4.ipa"
                 },
                 {
                     "version": "19.32.8",
                     "date": "2024-08-14T04:37:55Z",
-                    "localizedDescription": "Latest updates for uYouPlus.",
-                    "minOSVersion": "14.0",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.32.8-3.0.4/uYouPlus_19.32.8-3.0.4.ipa",
-                    "size": 118377247
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.32.8-3.0.4/uYouPlus_19.32.8-3.0.4.ipa"
                 },
                 {
                     "version": "19.30.2",
                     "date": "2024-08-06T04:09:37Z",
-                    "localizedDescription": "Latest updates for uYouPlus.",
-                    "minOSVersion": "14.0",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.30.2-3.0.4/uYouPlus_19.30.2-3.0.4.ipa",
-                    "size": 118078070
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.30.2-3.0.4/uYouPlus_19.30.2-3.0.4.ipa"
                 }
             ],
             "subtitle": "Latest release information",
@@ -217,39 +244,18 @@
             ],
             "permissions": [
                 {
-                    "type": "photos",
-                    "usageDescription": "Allows YouTube to upload media from your photo library."
+                    "type": "contact-info",
+                    "usageDescription": "YouTube accesses contact information to track users across apps."
                 },
                 {
-                    "type": "background-audio",
-                    "usageDescription": "Allows YouTube to play audio in the background."
+                    "type": "identifiers",
+                    "usageDescription": "Identifiers are used to track users across apps and websites."
                 }
             ],
             "appPermissions": {
                 "entitlements": [
                     {
-                        "name": "get-task-allow"
-                    },
-                    {
-                        "name": "aps-environment"
-                    },
-                    {
-                        "name": "com.apple.developer.associated-domains"
-                    },
-                    {
-                        "name": "com.apple.developer.coremedia.allow-alternate-video-decoder-selection"
-                    },
-                    {
-                        "name": "com.apple.developer.device-information.user-assigned-device-name"
-                    },
-                    {
-                        "name": "com.apple.developer.networking.multicast"
-                    },
-                    {
                         "name": "com.apple.developer.networking.wifi-info"
-                    },
-                    {
-                        "name": "com.apple.developer.usernotifications.time-sensitive"
                     },
                     {
                         "name": "com.apple.security.application-groups"
@@ -260,36 +266,52 @@
                 ],
                 "privacy": [
                     {
-                        "name": "AppleMusic",
-                        "usageDescription": "This lets you add your own audio files to your videos."
+                        "name": "Purchases",
+                        "usageDescription": "Data related to purchases may be collected."
                     },
                     {
-                        "name": "BluetoothPeripheral",
-                        "usageDescription": "YouTube needs bluetooth access to scan for nearby Cast devices."
+                        "name": "Financial Info",
+                        "usageDescription": "Financial data may be collected for analytics."
                     },
                     {
-                        "name": "Camera",
-                        "usageDescription": "This lets you create videos using the app."
+                        "name": "Location",
+                        "usageDescription": "Location data may be collected for personalization."
+                    },
+                    {
+                        "name": "Contact Info",
+                        "usageDescription": "Contact information may be collected and linked."
                     },
                     {
                         "name": "Contacts",
-                        "usageDescription": "Your contacts will be sent to YouTube servers to help you find friends to share videos with."
+                        "usageDescription": "Contacts may be accessed for improved recommendations."
                     },
                     {
-                        "name": "LocalNetwork",
-                        "usageDescription": "Access to your network allows YouTube to discover and connect to devices such as your TV."
+                        "name": "User Content",
+                        "usageDescription": "User-generated content may be used for service improvement."
                     },
                     {
-                        "name": "LocationWhenInUse",
-                        "usageDescription": "Makes it easier for you to attach location information to your videos and live streams and allows for features such as improved recommendations and ads."
+                        "name": "Search History",
+                        "usageDescription": "Search history may be linked to your identity."
                     },
                     {
-                        "name": "Microphone",
-                        "usageDescription": "This lets you include audio with your videos and search using your voice."
+                        "name": "Browsing History",
+                        "usageDescription": "Browsing history may be linked to your identity."
                     },
                     {
-                        "name": "PhotoLibrary",
-                        "usageDescription": "This lets you upload media you've already created."
+                        "name": "Identifiers",
+                        "usageDescription": "Identifiers may be used to track users across apps."
+                    },
+                    {
+                        "name": "Usage Data",
+                        "usageDescription": "Usage data helps YouTube improve its services."
+                    },
+                    {
+                        "name": "Diagnostics",
+                        "usageDescription": "Diagnostics data may be collected."
+                    },
+                    {
+                        "name": "Other Data",
+                        "usageDescription": "Other data may be collected but not linked."
                     }
                 ]
             }
