@@ -236,9 +236,14 @@ def create_app_data(repo, releases):
     # Add the releases to the app data
     for release in releases:
         version_info = {
-            "version": release["tag_name"],
-            "notes": release["body"],
-            "downloadURL": release["assets"][0]["url"] if release["assets"] else None
+              "version": (
+                release["tag_name"].lstrip("v").split('-')[1] if repo == "Raghav1729/BHTwitter" 
+                else release["tag_name"].lstrip("v").split('-')[0]
+            ),  # Remove 'v' and extract version; use index 1 for BHTwitter and index 0 for uYouPlus
+              "date": release["published_at"],  # Release date
+            "localizedDescription": release["body"] if release["body"] else "",  # Set to empty if body is null
+            "downloadURL": release["assets"][0]["browser_download_url"],  # Use the first asset's download URL
+            "size": release["assets"][0]["size"]  # File size of the first asset
         }
         app_data["versions"].append(version_info)
 
