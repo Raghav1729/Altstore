@@ -9,20 +9,18 @@ repositories = {
 
 # Prepare the updated base structure for apps.json
 apps_json_structure = {
-    "name": "Raghav Repository",  # Updated repository name
-    "identifier": "com.google.ios.youtube",  # Identifier for the repository
+    "name": "Raghav Repository",
+    "identifier": "com.google.ios.youtube",
     "apiVersion": "v2",
-    "subtitle": "A collection of apps for iOS.",  # Updated subtitle
+    "subtitle": "A collection of apps for iOS.",
     "description": (
         "This repository contains a curated selection of iOS applications, "
-        "including social media clients and utility apps. Each app is designed "
-        "to enhance your mobile experience with features tailored for users "
-        "seeking alternatives to the standard offerings. This source is automatically "
-        "kept up-to-date through GitHub Actions and contributions from independent developers."
+        "including social media clients and utility apps, kept up-to-date through "
+        "GitHub Actions and contributions from independent developers."
     ),
-    "iconURL": "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",  # Updated icon URL
-    "website": "https://github.com/Raghav1729",  # Updated website link
-    "tintColor": "#5CA399",  # Color for tinting
+    "iconURL": "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
+    "website": "https://github.com/Raghav1729",
+    "tintColor": "#5CA399",
     "featuredApps": [
         "com.google.ios.youtube",
         "com.atebits.Tweetie2"
@@ -50,7 +48,7 @@ def create_app_data(repo, bundle_id, releases):
         "bundleIdentifier": bundle_id,  # Set the bundle identifier from the dictionary
         "developerName": repo.split('/')[0],  # Get the developer name from the repo
         "localizedDescription": f"Latest updates for {repo.split('/')[-1]}.",  # Descriptive text for the app
-        "tintColor": "#5CA399",  # This can also be customized
+        "tintColor": "#5CA399",
         "screenshotURLs": [],  # Placeholder for screenshots
         "versions": [],  # List to hold version details
         "subtitle": "Latest release information",  # Subtitle for the app
@@ -58,22 +56,24 @@ def create_app_data(repo, bundle_id, releases):
 
     # Assign icon URL and screenshot URLs based on the repository
     if repo == "Raghav1729/uYouPlus":
-        app_data["iconURL"] = "https://github.com/Raghav1729/Altstore/blob/master/assets/icons/uYou.png"  # Updated icon URL for uYouPlus
+        app_data["iconURL"] = "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/uYou.png"  # Updated icon URL for uYouPlus
         app_data["screenshotURLs"] = [
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus1.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus2.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus3.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus4.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus5.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus6.jpeg?raw=true"
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus1.jpeg",
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus2.jpeg",
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus3.jpeg",
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus4.jpeg",
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus5.jpeg",
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus6.jpeg"
         ]
     elif repo == "Raghav1729/BHTwitter":
-        app_data["iconURL"] = "https://github.com/Raghav1729/Altstore/blob/master/assets/icons/bhtwitter.jpg"  # Updated icon URL for BHTwitter
+        app_data["iconURL"] = "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/BHTwitter.jpg"  # Updated icon URL for BHTwitter
         app_data["screenshotURLs"] = [
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter1.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter2.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter3.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter4.jpeg?raw=true"
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter1.jpeg",
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter2.jpeg",
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter3.jpeg",
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter4.jpeg",
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter5.jpeg",
+            "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter6.jpeg"
         ]
 
     # Add version details for each release
