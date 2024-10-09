@@ -1,16 +1,16 @@
 {
     "name": "Raghav Sources",
-    "identifier": "com.raghavsources.raghavsources",
+    "identifier": "com.google.ios.youtube",
     "apiVersion": "v2",
-    "subtitle": "Contains all of your favorite emulators, games, jailbreaks, utilities, and more.",
+    "subtitle": "Contains all of build by me",
     "description": "This source is an automatically kept up-to-date source, powered by GitHub Actions, the Python altparse library, and the support of independent developers. In here, you'll find anything from community maintained forks of Delta Emulator, to tiny Mac utilities that no one's ever heard of. If you have an app you'd like to see here, please use our website to reach out!",
-    "iconURL": "https://quarksources.github.io/assets/ElementQ-Circled.png",
-    "headerURL": "https://quarksources.github.io/assets/quantumsource.png",
-    "website": "https://quarksources.github.io/",
+    "iconURL": "",
+    "headerURL": "",
+    "website": "",
     "tintColor": "#343a40",
     "featuredApps": [
-        "com.litritt.ignited",
-        "com.example.mame4ios"
+        "com.google.ios.youtube",
+        "com.atebits.Tweetie2"
     ],
     "apps": [
         {
