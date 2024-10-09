@@ -2,15 +2,15 @@ import requests
 import json
 
 # Define the repositories
-repositories = [
+REPOSITORIES = [
     "Raghav1729/BHTwitter",
     "Raghav1729/uYouPlus"
 ]
 
 # Prepare the updated base structure for apps.json
-apps_json_structure = {
+APPS_JSON_STRUCTURE = {
     "name": "Raghav Repository",
-    "identifier": "com.google.ios.youtube",  # Retained as the main identifier for the repo
+    "identifier": "com.google.ios.youtube",
     "apiVersion": "v2",
     "subtitle": "A collection of apps for iOS.",
     "description": (
@@ -22,16 +22,16 @@ apps_json_structure = {
     "website": "https://github.com/Raghav1729",
     "tintColor": "#5CA399",
     "featuredApps": [
-        "com.google.ios.youtube",  # Retained for featured apps
+        "com.google.ios.youtube",
         "com.atebits.Tweetie2"
     ],
-    "apps": [],  # This will be populated dynamically
-    "userinfo": {},  # Placeholder for user info
-    "news": []  # Placeholder for news updates
+    "apps": [],
+    "userinfo": {},
+    "news": []
 }
 
-# Function to get releases from a repository
 def get_releases(repo):
+    """Fetch releases from a repository."""
     url = f"https://api.github.com/repos/{repo}/releases"
     try:
         response = requests.get(url)
@@ -41,222 +41,125 @@ def get_releases(repo):
         print(f"Error fetching releases for {repo}: {e}")
         return []
 
-# Function to create app data from repository and releases
 def create_app_data(repo, releases):
+    """Create app data structure from repository and releases."""
     app_data = {
-        "developerName": repo.split('/')[0],  # Get the developer name from the repo
-        "localizedDescription": f"Latest updates for {repo.split('/')[-1]}.",  # Descriptive text for the app
+        "developerName": repo.split('/')[0],
+        "localizedDescription": f"Latest updates for {repo.split('/')[-1]}.",
         "tintColor": "#5CA399",
-        "screenshotURLs": [],  # Placeholder for screenshots
-        "versions": [],  # List to hold version details
-        "subtitle": "Latest release information",  # Subtitle for the app
+        "screenshotURLs": [],
+        "versions": [],
+        "subtitle": "Latest release information"
     }
 
-    # Assign name, bundle ID, icon URL, and screenshots based on the repository
     if repo == "Raghav1729/uYouPlus":
-        app_data["name"] = "YouTube"  # Set name for uYouPlus
-        app_data["bundleIdentifier"] = "com.google.ios.youtube"  # Set bundle ID for uYouPlus
-        app_data["iconURL"] = "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/uYou.png"
-        
-        # Add screenshots for YouTube
-        app_data["screenshots"] = [
-            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus1.jpeg"},
-            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus2.jpeg"},
-            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus3.jpeg"},
-            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus4.jpeg"},
-            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus5.jpeg"},
-            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus6.jpeg"}
-        ]
-        
-        # Permissions for YouTube based on App Store information
-        app_data["permissions"] = [
-            {
-                "type": "contact-info",
-                "usageDescription": "YouTube accesses contact information to track users across apps."
-            },
-            {
-                "type": "identifiers",
-                "usageDescription": "Identifiers are used to track users across apps and websites."
-            }
-        ]
-        
-        app_data["appPermissions"] = {
-            "entitlements": [
-                {"name": "get-task-allow"},
-                {"name": "aps-environment"},
-                {"name": "com.apple.developer.associated-domains"},
-                {"name": "com.apple.developer.coremedia.allow-alternate-video-decoder-selection"},
-                {"name": "com.apple.developer.device-information.user-assigned-device-name"},
-                {"name": "com.apple.developer.networking.multicast"},
-                {"name": "com.apple.developer.networking.wifi-info"},
-                {"name": "com.apple.developer.usernotifications.time-sensitive"},
-                {"name": "com.apple.security.application-groups"},
-                {"name": "keychain-access-groups"}
+        app_data.update({
+            "name": "YouTube",
+            "bundleIdentifier": "com.google.ios.youtube",
+            "iconURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/uYou.png",
+            "screenshots": [
+                {"imageURL": f"https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus{i}.jpeg"}
+                for i in range(1, 7)
             ],
-            "privacy": [
-                {
-                    "name": "AppleMusic",
-                    "usageDescription": "This lets you add your own audio files to your videos."
-                },
-                {
-                    "name": "BluetoothPeripheral",
-                    "usageDescription": "YouTube needs bluetooth access to scan for nearby Cast devices."
-                },
-                {
-                    "name": "Camera",
-                    "usageDescription": "This lets you create videos using the app."
-                },
-                {
-                    "name": "Contacts",
-                    "usageDescription": "Your contacts will be sent to YouTube servers to help you find friends to share videos with."
-                },
-                {
-                    "name": "LocalNetwork",
-                    "usageDescription": "Access to your network allows YouTube to discover and connect to devices such as your TV."
-                },
-                {
-                    "name": "LocationWhenInUse",
-                    "usageDescription": "Makes it easier for you to attach location information to your videos and live streams and allows for features such as improved recommendations and ads."
-                },
-                {
-                    "name": "Microphone",
-                    "usageDescription": "This lets you include audio with your videos and search using your voice."
-                },
-                {
-                    "name": "PhotoLibrary",
-                    "usageDescription": "This lets you upload media you've already created."
-                }
-            ]
-        }
-
+            "permissions": [
+                {"type": "contact-info", "usageDescription": "YouTube accesses contact information to track users across apps."},
+                {"type": "identifiers", "usageDescription": "Identifiers are used to track users across apps and websites."}
+            ],
+            "appPermissions": {
+                "entitlements": [
+                    {"name": "get-task-allow"},
+                    {"name": "aps-environment"},
+                    {"name": "com.apple.developer.associated-domains"},
+                    {"name": "com.apple.developer.coremedia.allow-alternate-video-decoder-selection"},
+                    {"name": "com.apple.developer.device-information.user-assigned-device-name"},
+                    {"name": "com.apple.developer.networking.multicast"},
+                    {"name": "com.apple.developer.networking.wifi-info"},
+                    {"name": "com.apple.developer.usernotifications.time-sensitive"},
+                    {"name": "com.apple.security.application-groups"},
+                    {"name": "keychain-access-groups"},
+                    {"name": "com.apple.developer.group-session"},
+                    {"name": "com.apple.developer.siri"}
+                ],
+                "privacy": [
+                    {"name": "AppleMusic", "usageDescription": "This lets you add your own audio files to your videos."},
+                    {"name": "BluetoothPeripheral", "usageDescription": "YouTube needs bluetooth access to scan for nearby Cast devices."},
+                    {"name": "Camera", "usageDescription": "This lets you create videos using the app."},
+                    {"name": "Contacts", "usageDescription": "Your contacts will be sent to YouTube servers to help you find friends to share videos with."},
+                    {"name": "LocalNetwork", "usageDescription": "Access to your network allows YouTube to discover and connect to devices such as your TV."},
+                    {"name": "LocationWhenInUse", "usageDescription": "Makes it easier for you to attach location information to your videos and live streams and allows for features such as improved recommendations and ads."},
+                    {"name": "Microphone", "usageDescription": "This lets you include audio with your videos and search using your voice."},
+                    {"name": "PhotoLibrary", "usageDescription": "This lets you upload media you've already created."},
+                    {"name": "NSUserTrackingUsage-Description", "usageDescription": "User tracking helps YouTube provide personalized content."}
+                ]
+            }
+        })
+    
     elif repo == "Raghav1729/BHTwitter":
-        app_data["name"] = "X"  # Set name for BHTwitter
-        app_data["bundleIdentifier"] = "com.atebits.Tweetie2"  # Set bundle ID for BHTwitter
-        app_data["iconURL"] = "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/BHTwitter.jpg"
-        
-        # Add screenshots for Twitter
-        app_data["screenshots"] = [
-            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter1.png"},
-            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter2.png"},
-            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter3.png"},
-            {"imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter4.png"}
-        ]
-        
-        # Permissions for Twitter based on App Store information
-        app_data["permissions"] = [
-            {
-                "type": "purchases",
-                "usageDescription": "Twitter collects data related to your purchases for better ad targeting."
-            },
-            {
-                "type": "location",
-                "usageDescription": "Twitter uses location data for tailored content and advertisements."
-            },
-            {
-                "type": "contact-info",
-                "usageDescription": "Twitter accesses your contact info to help connect you with others."
-            },
-            {
-                "type": "user-content",
-                "usageDescription": "User-generated content may be used for service improvement."
-            },
-            {
-                "type": "browsing-history",
-                "usageDescription": "Browsing history is used for personalized content."
-            },
-            {
-                "type": "identifiers",
-                "usageDescription": "Identifiers are used for tracking across applications."
-            },
-            {
-                "type": "usage-data",
-                "usageDescription": "Usage data helps Twitter improve its services."
-            }
-        ]
-        
-        app_data["appPermissions"] = {
-            "entitlements": [
-                {"name": "com.apple.developer.devicecheck.ap-pattest-environment"},
-                {"name": "com.apple.developer.associated-domains"},
-                {"name": "com.apple.developer.replace-plugin"},
-                {"name": "com.apple.developer.usernotifications.communication"},
-                {"name": "com.apple.developer.usernotifications.time-sensitive"},
-                {"name": "aps-environment"},
-                {"name": "com.apple.developer.applesignin"},
-                {"name": "com.apple.developer.siri"}
+        app_data.update({
+            "name": "X",
+            "bundleIdentifier": "com.atebits.Tweetie2",
+            "iconURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/BHTwitter.jpg",
+            "screenshots": [
+                {"imageURL": f"https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter{i}.png"}
+                for i in range(1, 5)
             ],
-            "privacy": [
-                {
-                    "name": "Bluetooth",
-                    "usageDescription": "Bluetooth access is needed for connecting to devices."
-                },
-                {
-                    "name": "Calendars",
-                    "usageDescription": "Access to your calendars is required for scheduling tweets."
-                },
-                {
-                    "name": "Camera",
-                    "usageDescription": "Camera access is necessary for taking photos and videos directly from the app."
-                },
-                {
-                    "name": "Face ID",
-                    "usageDescription": "Face ID is used for secure logins."
-                },
-                {
-                    "name": "LocalNetwork",
-                    "usageDescription": "Access to your local network is needed for discovering devices."
-                },
-                {
-                    "name": "LocationWhenInUse",
-                    "usageDescription": "Location access is necessary to provide tailored experiences."
-                },
-                {
-                    "name": "Microphone",
-                    "usageDescription": "Microphone access is required for voice tweets."
-                },
-                {
-                    "name": "PhotoLibraryAdd",
-                    "usageDescription": "Access to your photo library is needed for uploading images."
-                },
-                {
-                    "name": "PhotoLibrary",
-                    "usageDescription": "Twitter may access your photo library to share photos."
-                },
-                {
-                    "name": "SpeechRecognition",
-                    "usageDescription": "Speech recognition is required for voice commands."
-                },
-                {
-                    "name": "UserTracking",
-                    "usageDescription": "User tracking helps Twitter provide personalized content."
-                }
-            ]
-        }
+            "permissions": [
+                {"type": "purchases", "usageDescription": "Twitter collects data related to your purchases for better ad targeting."},
+                {"type": "location", "usageDescription": "Twitter uses location data for tailored content and advertisements."},
+                {"type": "contact-info", "usageDescription": "Twitter accesses your contact info to help connect you with others."},
+                {"type": "user-content", "usageDescription": "User-generated content may be used for service improvement."},
+                {"type": "browsing-history", "usageDescription": "Browsing history is used for personalized content."},
+                {"type": "identifiers", "usageDescription": "Identifiers are used for tracking across applications."},
+                {"type": "usage-data", "usageDescription": "Usage data helps Twitter improve its services."}
+            ],
+            "appPermissions": {
+                "entitlements": [
+                    {"name": "com.apple.developer.devicecheck.ap-pattest-environment"},
+                    {"name": "com.apple.developer.associated-domains"},
+                    {"name": "com.apple.developer.replace-plugin"},
+                    {"name": "com.apple.developer.usernotifications.communication"},
+                    {"name": "com.apple.developer.usernotifications.time-sensitive"},
+                    {"name": "aps-environment"},
+                    {"name": "com.apple.developer.applesignin"},
+                    {"name": "com.apple.developer.siri"}
+                ],
+                "privacy": [
+                    {"name": "Bluetooth", "usageDescription": "Bluetooth access is needed for connecting to devices."},
+                    {"name": "Calendars", "usageDescription": "Access to your calendars is required for scheduling tweets."},
+                    {"name": "Camera", "usageDescription": "Camera access is necessary for taking photos and videos directly from the app."},
+                    {"name": "Face ID", "usageDescription": "Face ID is used for secure logins."},
+                    {"name": "LocalNetwork", "usageDescription": "Access to your local network is needed for discovering devices."},
+                    {"name": "LocationWhenInUse", "usageDescription": "Location access is necessary to provide tailored experiences."},
+                    {"name": "Microphone", "usageDescription": "Microphone access is required for voice tweets."},
+                    {"name": "PhotoLibraryAdd", "usageDescription": "Access to your photo library is needed for uploading images."},
+                    {"name": "PhotoLibrary", "usageDescription": "Twitter may access your photo library to share photos."},
+                    {"name": "SpeechRecognition", "usageDescription": "Speech recognition is required for voice commands."},
+                    {"name": "UserTracking", "usageDescription": "User tracking helps Twitter provide personalized content."}
+                ]
+            }
+        })
 
     # Add the releases to the app data
     for release in releases:
         version_info = {
-              "version": (
-                release["tag_name"].lstrip("v").split('-')[1] if repo == "Raghav1729/BHTwitter" 
-                else release["tag_name"].lstrip("v").split('-')[0]
-            ),  # Remove 'v' and extract version; use index 1 for BHTwitter and index 0 for uYouPlus
-              "date": release["published_at"],  # Release date
-            "localizedDescription": release["body"] if release["body"] else "",  # Set to empty if body is null
-            "downloadURL": release["assets"][0]["browser_download_url"],  # Use the first asset's download URL
-            "size": release["assets"][0]["size"]  # File size of the first asset
+            "version": release["tag_name"].lstrip("v").split('-')[1] if repo == "Raghav1729/BHTwitter" else release["tag_name"].lstrip("v").split('-')[0],
+            "date": release["published_at"],
+            "localizedDescription": release.get("body", ""),  # Use get to avoid KeyError
+            "downloadURL": release["assets"][0]["browser_download_url"],
+            "size": release["assets"][0]["size"]
         }
         app_data["versions"].append(version_info)
 
     return app_data
 
-# Loop through the repositories and populate the apps array
-for repo in repositories:
+# Populate the apps array
+for repo in REPOSITORIES:
     releases = get_releases(repo)
     app_data = create_app_data(repo, releases)
-    apps_json_structure["apps"].append(app_data)
+    APPS_JSON_STRUCTURE["apps"].append(app_data)
 
 # Write to apps.json file
 with open("apps.json", "w") as f:
-    json.dump(apps_json_structure, f, indent=4)
+    json.dump(APPS_JSON_STRUCTURE, f, indent=4)
 
 print("apps.json has been generated successfully.")
