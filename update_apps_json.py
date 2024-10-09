@@ -36,40 +36,42 @@ def get_releases(repo):
 # Fetch releases and build the apps section
 for repo in repositories:
     releases = get_releases(repo)
+    
+    # Create an app entry for each repository
+    app_data = {
+        "name": repo.split('/')[-1],  # Use the repo name as the app name
+        "bundleIdentifier": repo.lower().replace('/', '.'),
+        "developerName": repo.split('/')[0],
+        "subtitle": "Latest release information",
+        "localizedDescription": f"Latest releases for {repo.split('/')[-1]}.",
+        "iconURL": "https://github.com/" + repo + "/blob/main/icon.png?raw=true",  # Replace with actual icon URL if available
+        "tintColor": "#5CA399",
+        "screenshotURLs": [],
+        "versions": [],
+        "appPermissions": {
+            "entitlements": [],
+            "privacy": []
+        },
+        "appID": repo.lower().replace('/', '.')
+    }
+
+    # Add version details for each release
     for release in releases:
-        app_data = {
-            "name": release["name"],
-            "bundleIdentifier": repo.lower().replace('/', '.'),
-            "developerName": repo.split('/')[0],
-            "subtitle": release.get("tag_name", "Release"),
-            "localizedDescription": release.get("body", ""),
-            "iconURL": "https://github.com/" + repo + "/blob/main/icon.png?raw=true",  # Replace with actual icon URL if available
-            "tintColor": "#5CA399",
-            "screenshotURLs": [],
-            "versions": [],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": []
-            },
-            "appID": repo.lower().replace('/', '.')
-        }
+        for asset in release.get("assets", []):
+            version_data = {
+                "absoluteVersion": asset["name"],
+                "version": asset["name"].split('_')[1],  # Modify to get the version if follows a specific pattern
+                "buildVersion": "1",  # Modify this based on your versioning
+                "date": release["published_at"],
+                "localizedDescription": release["body"],
+                "downloadURL": asset["browser_download_url"],
+                "size": asset["size"],
+                "sha256": "",  # Placeholder, compute SHA256 if needed
+            }
+            app_data["versions"].append(version_data)
 
-        # Add version details
-        if "assets" in release:
-            for asset in release["assets"]:
-                version_data = {
-                    "absoluteVersion": asset["name"],
-                    "version": asset["name"].split('_')[1],  # Modify to get the version if follows a specific pattern
-                    "buildVersion": "1",  # Modify this based on your versioning
-                    "date": release["published_at"],
-                    "localizedDescription": release["body"],
-                    "downloadURL": asset["browser_download_url"],
-                    "size": asset["size"],
-                    "sha256": "",  # Placeholder, compute SHA256 if needed
-                }
-                app_data["versions"].append(version_data)
-
-        apps_json_structure["apps"].append(app_data)
+    # Append the app data to the apps list
+    apps_json_structure["apps"].append(app_data)
 
 # Write the updated structure to apps.json
 with open('apps.json', 'w') as f:
