@@ -246,7 +246,8 @@ def create_app_data(repo, releases):
             "version": release["tag_name"].lstrip("v").split('-')[0],  # Remove 'v' and extract version
             "date": release["published_at"],  # Release date
             "localizedDescription": release["body"] if release["body"] else "",  # Set to empty if body is null
-            "downloadURL": release["assets"][0]["browser_download_url"]  # Use the first asset's download URL
+            "downloadURL": release["assets"][0]["browser_download_url"],  # Use the first asset's download URL
+            "size": release["assets"][0]["size"]  # File size of the first asset
         }
         app_data["versions"].append(version_data)
 
