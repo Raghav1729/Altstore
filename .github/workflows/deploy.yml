@@ -3,7 +3,7 @@ name: Run Python Script
 on:
   push:
     branches:
-      - main  # Adjust to your default branch if different
+      - master
   schedule:
     - cron: '0 0 * * 0'  # This runs the workflow every Sunday at midnight UTC.
   workflow_dispatch:  # Allows manual triggering of the workflow.
@@ -40,4 +40,4 @@ jobs:
         git config --local user.name "GitHub Action"
         git add altsore.json
         git commit -m "Update altsore.json with the latest releases" || echo "No changes to commit"
-        git push origin HEAD:main  # Push changes back to the repository
+        git push origin HEAD:master  # Push changes back to the repository
