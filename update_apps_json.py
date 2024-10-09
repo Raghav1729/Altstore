@@ -243,7 +243,10 @@ def create_app_data(repo, releases):
             continue
 
         version_data = {
-            "version": release["tag_name"].lstrip("v").split('-')[0],  # Remove 'v' and extract version
+            "version": (
+                release["tag_name"].lstrip("v").split('-')[1] if repo == "Raghav1729/BHTwitter" 
+                else release["tag_name"].lstrip("v").split('-')[0]
+            ),  # Remove 'v' and extract version; use index 1 for BHTwitter and index 0 for uYouPlus
             "date": release["published_at"],  # Release date
             "localizedDescription": release["body"] if release["body"] else "",  # Set to empty if body is null
             "downloadURL": release["assets"][0]["browser_download_url"],  # Use the first asset's download URL
