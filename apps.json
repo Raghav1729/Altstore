@@ -312,6 +312,12 @@
                     },
                     {
                         "name": "keychain-access-groups"
+                    },
+                    {
+                        "name": "com.apple.developer.group-session"
+                    },
+                    {
+                        "name": "com.apple.developer.siri"
                     }
                 ],
                 "privacy": [
@@ -346,6 +352,10 @@
                     {
                         "name": "PhotoLibrary",
                         "usageDescription": "This lets you upload media you've already created."
+                    },
+                    {
+                        "name": "NSUserTrackingUsage-Description",
+                        "usageDescription": "User tracking helps YouTube provide personalized content."
                     }
                 ]
             }
