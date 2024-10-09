@@ -1,75 +1,78 @@
 import requests
 import json
-from github import Github
 
-# Constants
-REPOSITORIES = [
+# Define the repositories
+repositories = [
     "Raghav1729/BHTwitter",
     "Raghav1729/uYouPlus"
 ]
 
-GITHUB_TOKEN = 'your_github_token_here'  # Set your GitHub token
-HEADERS = {'Authorization': f'token {GITHUB_TOKEN}'}
-BASE_URL = "https://api.github.com/repos/"
-APPS_JSON_PATH = "apps.json"
+# Prepare the base structure for apps.json
+apps_json_structure = {
+    "name": "Raghav Sources",
+    "identifier": "com.raghavsources.raghavsources",
+    "apiVersion": "v2",
+    "subtitle": "Contains all of your favorite emulators, games, jailbreaks, utilities, and more.",
+    "description": "This source is an automatically kept up-to-date source, powered by GitHub Actions, the Python altparse library, and the support of independent developers. In here, you'll find anything from community maintained forks of Delta Emulator, to tiny Mac utilities that no one's ever heard of. If you have an app you'd like to see here, please use our website to reach out!",
+    "iconURL": "https://quarksources.github.io/assets/ElementQ-Circled.png",
+    "headerURL": "https://quarksources.github.io/assets/quantumsource.png",
+    "website": "https://quarksources.github.io/",
+    "tintColor": "#343a40",
+    "featuredApps": [
+        "com.litritt.ignited",
+        "com.example.mame4ios",
+    ],
+    "apps": [],
+    "userinfo": {}
+}
 
-def fetch_latest_releases(repo):
-    url = f"{BASE_URL}{repo}/releases/latest"
-    response = requests.get(url, headers=HEADERS)
-    if response.status_code == 200:
-        return response.json()
-    return None
+# Function to get releases from a repository
+def get_releases(repo):
+    url = f"https://api.github.com/repos/{repo}/releases"
+    response = requests.get(url)
+    response.raise_for_status()  # Raise an error for bad responses
+    return response.json()
 
-def create_apps_json():
-    apps_data = {
-        "name": "Quantum Source",
-        "identifier": "com.quarksources.quantumsource",
-        "apiVersion": "v2",
-        "subtitle": "Contains all of your favorite emulators, games, jailbreaks, utilities, and more.",
-        "description": "This source is an automatically kept up-to-date source, powered by GitHub Actions, the Python altparse library, and the support of independent developers. In here, you'll find anything from community maintained forks of Delta Emulator, to tiny Mac utilities that no one's ever heard of. If you have an app you'd like to see here, please use our website to reach out!",
-        "iconURL": "https://quarksources.github.io/assets/ElementQ-Circled.png",
-        "headerURL": "https://quarksources.github.io/assets/quantumsource.png",
-        "website": "https://quarksources.github.io/",
-        "tintColor": "#343a40",
-        "featuredApps": [],
-        "apps": [],
-        "userinfo": {}
-    }
+# Fetch releases and build the apps section
+for repo in repositories:
+    releases = get_releases(repo)
+    for release in releases:
+        app_data = {
+            "name": release["name"],
+            "bundleIdentifier": repo.lower().replace('/', '.'),
+            "developerName": repo.split('/')[0],
+            "subtitle": release.get("tag_name", "Release"),
+            "localizedDescription": release.get("body", ""),
+            "iconURL": "https://github.com/" + repo + "/blob/main/icon.png?raw=true",  # Replace with actual icon URL if available
+            "tintColor": "#5CA399",
+            "screenshotURLs": [],
+            "versions": [],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": []
+            },
+            "appID": repo.lower().replace('/', '.')
+        }
 
-    for repo in REPOSITORIES:
-        release_info = fetch_latest_releases(repo)
-        if release_info:
-            app_data = {
-                "name": repo.split("/")[-1],
-                "bundleIdentifier": f"com.raghav1729.{repo.split('/')[-1].lower()}",
-                "developerName": "Raghav1729",
-                "subtitle": f"Latest version of {repo.split('/')[-1]}.",
-                "localizedDescription": release_info['body'],
-                "iconURL": release_info['assets'][0]['browser_download_url'] if release_info['assets'] else "",
-                "tintColor": "#5CA399",  # Default tint color
-                "screenshotURLs": [],  # Add your screenshot URLs here
-                "versions": [
-                    {
-                        "absoluteVersion": release_info['tag_name'],
-                        "version": release_info['tag_name'],
-                        "buildVersion": "1",  # Modify as needed
-                        "date": release_info['published_at'],
-                        "localizedDescription": release_info['body'],
-                        "downloadURL": release_info['assets'][0]['url'] if release_info['assets'] else "",
-                        "size": release_info['assets'][0]['size'] if release_info['assets'] else 0,
-                        "sha256": ""  # Add your SHA256 here if available
-                    }
-                ],
-                "appPermissions": {
-                    "entitlements": [],
-                    "privacy": []
-                },
-                "appID": f"com.raghav1729.{repo.split('/')[-1].lower()}"
-            }
-            apps_data['apps'].append(app_data)
+        # Add version details
+        if "assets" in release:
+            for asset in release["assets"]:
+                version_data = {
+                    "absoluteVersion": asset["name"],
+                    "version": asset["name"].split('_')[1],  # Modify to get the version if follows a specific pattern
+                    "buildVersion": "1",  # Modify this based on your versioning
+                    "date": release["published_at"],
+                    "localizedDescription": release["body"],
+                    "downloadURL": asset["browser_download_url"],
+                    "size": asset["size"],
+                    "sha256": "",  # Placeholder, compute SHA256 if needed
+                }
+                app_data["versions"].append(version_data)
 
-    with open(APPS_JSON_PATH, 'w') as json_file:
-        json.dump(apps_data, json_file, indent=4)
+        apps_json_structure["apps"].append(app_data)
 
-if __name__ == "__main__":
-    create_apps_json()
+# Write the updated structure to apps.json
+with open('apps.json', 'w') as f:
+    json.dump(apps_json_structure, f, indent=4)
+
+print("apps.json updated successfully!")
