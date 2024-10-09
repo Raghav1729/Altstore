@@ -24,7 +24,7 @@
             ],
             "versions": [
                 {
-                    "version": "v4.3-10.62",
+                    "version": "4.3",
                     "date": "2024-10-08T17:30:57Z",
                     "localizedDescription": "Latest updates for BHTwitter.",
                     "minOSVersion": "14.0",
@@ -32,7 +32,7 @@
                     "size": 146799700
                 },
                 {
-                    "version": "v4.3-10.61.2",
+                    "version": "4.3",
                     "date": "2024-10-07T03:58:19Z",
                     "localizedDescription": "Latest updates for BHTwitter.",
                     "minOSVersion": "14.0",
@@ -40,7 +40,7 @@
                     "size": 146770569
                 },
                 {
-                    "version": "v4.3-10.61",
+                    "version": "4.3",
                     "date": "2024-10-01T05:42:55Z",
                     "localizedDescription": "Latest updates for BHTwitter.",
                     "minOSVersion": "14.0",
@@ -48,7 +48,7 @@
                     "size": 146763198
                 },
                 {
-                    "version": "v4.3-10.60",
+                    "version": "4.3",
                     "date": "2024-09-27T14:52:42Z",
                     "localizedDescription": "Latest updates for BHTwitter.",
                     "minOSVersion": "14.0",
@@ -75,7 +75,7 @@
             ],
             "versions": [
                 {
-                    "version": "v19.40.4-3.0.4",
+                    "version": "19.40.4",
                     "date": "2024-10-07T03:59:34Z",
                     "localizedDescription": "Latest updates for uYouPlus.",
                     "minOSVersion": "14.0",
@@ -83,7 +83,7 @@
                     "size": 120798752
                 },
                 {
-                    "version": "v19.39.1-3.0.4",
+                    "version": "19.39.1",
                     "date": "2024-10-01T05:50:02Z",
                     "localizedDescription": "Latest updates for uYouPlus.",
                     "minOSVersion": "14.0",
@@ -91,7 +91,7 @@
                     "size": 120732542
                 },
                 {
-                    "version": "v19.38.2-3.0.3",
+                    "version": "19.38.2",
                     "date": "2024-09-27T13:33:14Z",
                     "localizedDescription": "Latest updates for uYouPlus.",
                     "minOSVersion": "14.0",
@@ -99,7 +99,7 @@
                     "size": 120294068
                 },
                 {
-                    "version": "v19.37.2-3.0.4",
+                    "version": "19.37.2",
                     "date": "2024-09-17T04:02:43Z",
                     "localizedDescription": "**Full Changelog**: https://github.com/Raghav1729/uYouPlus/compare/v19.36.1-3.0.4...v19.37.2-3.0.4",
                     "minOSVersion": "14.0",
@@ -107,7 +107,7 @@
                     "size": 120161517
                 },
                 {
-                    "version": "v19.36.1-3.0.4",
+                    "version": "19.36.1",
                     "date": "2024-09-10T06:18:06Z",
                     "localizedDescription": "Latest updates for uYouPlus.",
                     "minOSVersion": "14.0",
@@ -115,7 +115,7 @@
                     "size": 119960558
                 },
                 {
-                    "version": "v19.35.3-3.0.4",
+                    "version": "19.35.3",
                     "date": "2024-09-03T05:46:40Z",
                     "localizedDescription": "Latest updates for uYouPlus.",
                     "minOSVersion": "14.0",
@@ -123,7 +123,7 @@
                     "size": 119619261
                 },
                 {
-                    "version": "v19.34.2-3.0.4",
+                    "version": "19.34.2",
                     "date": "2024-08-27T03:20:09Z",
                     "localizedDescription": "Latest updates for uYouPlus.",
                     "minOSVersion": "14.0",
@@ -131,7 +131,7 @@
                     "size": 119174258
                 },
                 {
-                    "version": "v19.33.2-3.0.4",
+                    "version": "19.33.2",
                     "date": "2024-08-19T17:24:56Z",
                     "localizedDescription": "Latest updates for uYouPlus.",
                     "minOSVersion": "14.0",
@@ -139,7 +139,7 @@
                     "size": 118812125
                 },
                 {
-                    "version": "v19.32.8-3.0.4",
+                    "version": "19.32.8",
                     "date": "2024-08-14T04:37:55Z",
                     "localizedDescription": "Latest updates for uYouPlus.",
                     "minOSVersion": "14.0",
@@ -147,7 +147,7 @@
                     "size": 118377247
                 },
                 {
-                    "version": "v19.30.2-3.0.4",
+                    "version": "19.30.2",
                     "date": "2024-08-06T04:09:37Z",
                     "localizedDescription": "Latest updates for uYouPlus.",
                     "minOSVersion": "14.0",
