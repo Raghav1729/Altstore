@@ -9,17 +9,17 @@
     "website": "",
     "tintColor": "#343a40",
     "featuredApps": [
-        "com.google.ios.youtube",
-        "com.atebits.Tweetie2"
+        "com.raghav1729.bhtwitter",
+        "com.raghav1729.uYouPlus"
     ],
     "apps": [
         {
             "name": "BHTwitter",
-            "bundleIdentifier": "raghav1729.bhtwitter",
+            "bundleIdentifier": "com.raghav1729.bhtwitter",
             "developerName": "Raghav1729",
             "subtitle": "Latest release information",
             "localizedDescription": "Latest releases for BHTwitter.",
-            "iconURL": "https://github.com/Raghav1729/BHTwitter/blob/main/icon.png?raw=true",
+            "iconURL": "",
             "tintColor": "#5CA399",
             "screenshotURLs": [],
             "versions": [
@@ -72,11 +72,11 @@
         },
         {
             "name": "uYouPlus",
-            "bundleIdentifier": "raghav1729.uyouplus",
+            "bundleIdentifier": "com.raghav1729.uYouPlus",
             "developerName": "Raghav1729",
             "subtitle": "Latest release information",
             "localizedDescription": "Latest releases for uYouPlus.",
-            "iconURL": "https://github.com/Raghav1729/uYouPlus/blob/main/icon.png?raw=true",
+            "iconURL": "",
             "tintColor": "#5CA399",
             "screenshotURLs": [],
             "versions": [
