@@ -1,6 +1,6 @@
 {
-    "name": "Quantum Source",
-    "identifier": "com.quarksources.quantumsource",
+    "name": "Raghav Sources",
+    "identifier": "com.raghavsources.raghavsources",
     "apiVersion": "v2",
     "subtitle": "Contains all of your favorite emulators, games, jailbreaks, utilities, and more.",
     "description": "This source is an automatically kept up-to-date source, powered by GitHub Actions, the Python altparse library, and the support of independent developers. In here, you'll find anything from community maintained forks of Delta Emulator, to tiny Mac utilities that no one's ever heard of. If you have an app you'd like to see here, please use our website to reach out!",
@@ -8,7 +8,389 @@
     "headerURL": "https://quarksources.github.io/assets/quantumsource.png",
     "website": "https://quarksources.github.io/",
     "tintColor": "#343a40",
-    "featuredApps": [],
-    "apps": [],
+    "featuredApps": [
+        "com.litritt.ignited",
+        "com.example.mame4ios"
+    ],
+    "apps": [
+        {
+            "name": "v4.3-10.62 - BHTwitter",
+            "bundleIdentifier": "raghav1729.bhtwitter",
+            "developerName": "Raghav1729",
+            "subtitle": "v4.3-10.62",
+            "localizedDescription": "",
+            "iconURL": "https://github.com/Raghav1729/BHTwitter/blob/main/icon.png?raw=true",
+            "tintColor": "#5CA399",
+            "screenshotURLs": [],
+            "versions": [
+                {
+                    "absoluteVersion": "BHTwitter-sideloaded_4.3_10.62.ipa",
+                    "version": "4.3",
+                    "buildVersion": "1",
+                    "date": "2024-10-08T17:30:57Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.62/BHTwitter-sideloaded_4.3_10.62.ipa",
+                    "size": 146799700,
+                    "sha256": ""
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": []
+            },
+            "appID": "raghav1729.bhtwitter"
+        },
+        {
+            "name": "v4.3-10.61.2 - BHTwitter",
+            "bundleIdentifier": "raghav1729.bhtwitter",
+            "developerName": "Raghav1729",
+            "subtitle": "v4.3-10.61.2",
+            "localizedDescription": "",
+            "iconURL": "https://github.com/Raghav1729/BHTwitter/blob/main/icon.png?raw=true",
+            "tintColor": "#5CA399",
+            "screenshotURLs": [],
+            "versions": [
+                {
+                    "absoluteVersion": "BHTwitter-sideloaded_4.3_10.61.2.ipa",
+                    "version": "4.3",
+                    "buildVersion": "1",
+                    "date": "2024-10-07T03:58:19Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.61.2/BHTwitter-sideloaded_4.3_10.61.2.ipa",
+                    "size": 146770569,
+                    "sha256": ""
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": []
+            },
+            "appID": "raghav1729.bhtwitter"
+        },
+        {
+            "name": "v4.3-10.61 - BHTwitter",
+            "bundleIdentifier": "raghav1729.bhtwitter",
+            "developerName": "Raghav1729",
+            "subtitle": "v4.3-10.61",
+            "localizedDescription": "",
+            "iconURL": "https://github.com/Raghav1729/BHTwitter/blob/main/icon.png?raw=true",
+            "tintColor": "#5CA399",
+            "screenshotURLs": [],
+            "versions": [
+                {
+                    "absoluteVersion": "BHTwitter-sideloaded_4.3_10.61.ipa",
+                    "version": "4.3",
+                    "buildVersion": "1",
+                    "date": "2024-10-01T05:42:55Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.61/BHTwitter-sideloaded_4.3_10.61.ipa",
+                    "size": 146763198,
+                    "sha256": ""
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": []
+            },
+            "appID": "raghav1729.bhtwitter"
+        },
+        {
+            "name": "v4.3-10.60 - BHTwitter",
+            "bundleIdentifier": "raghav1729.bhtwitter",
+            "developerName": "Raghav1729",
+            "subtitle": "v4.3-10.60",
+            "localizedDescription": "",
+            "iconURL": "https://github.com/Raghav1729/BHTwitter/blob/main/icon.png?raw=true",
+            "tintColor": "#5CA399",
+            "screenshotURLs": [],
+            "versions": [
+                {
+                    "absoluteVersion": "BHTwitter-sideloaded_4.3_10.60.ipa",
+                    "version": "4.3",
+                    "buildVersion": "1",
+                    "date": "2024-09-27T14:52:42Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.60/BHTwitter-sideloaded_4.3_10.60.ipa",
+                    "size": 146538707,
+                    "sha256": ""
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": []
+            },
+            "appID": "raghav1729.bhtwitter"
+        },
+        {
+            "name": "v19.40.4-3.0.4",
+            "bundleIdentifier": "raghav1729.uyouplus",
+            "developerName": "Raghav1729",
+            "subtitle": "v19.40.4-3.0.4",
+            "localizedDescription": "",
+            "iconURL": "https://github.com/Raghav1729/uYouPlus/blob/main/icon.png?raw=true",
+            "tintColor": "#5CA399",
+            "screenshotURLs": [],
+            "versions": [
+                {
+                    "absoluteVersion": "uYouPlus_19.40.4-3.0.4.ipa",
+                    "version": "19.40.4-3.0.4.ipa",
+                    "buildVersion": "1",
+                    "date": "2024-10-07T03:59:34Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.40.4-3.0.4/uYouPlus_19.40.4-3.0.4.ipa",
+                    "size": 120798752,
+                    "sha256": ""
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": []
+            },
+            "appID": "raghav1729.uyouplus"
+        },
+        {
+            "name": "v19.39.1-3.0.4",
+            "bundleIdentifier": "raghav1729.uyouplus",
+            "developerName": "Raghav1729",
+            "subtitle": "v19.39.1-3.0.4",
+            "localizedDescription": "",
+            "iconURL": "https://github.com/Raghav1729/uYouPlus/blob/main/icon.png?raw=true",
+            "tintColor": "#5CA399",
+            "screenshotURLs": [],
+            "versions": [
+                {
+                    "absoluteVersion": "uYouPlus_19.39.1-3.0.4.ipa",
+                    "version": "19.39.1-3.0.4.ipa",
+                    "buildVersion": "1",
+                    "date": "2024-10-01T05:50:02Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.39.1-3.0.4/uYouPlus_19.39.1-3.0.4.ipa",
+                    "size": 120732542,
+                    "sha256": ""
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": []
+            },
+            "appID": "raghav1729.uyouplus"
+        },
+        {
+            "name": "v19.38.2-3.0.3",
+            "bundleIdentifier": "raghav1729.uyouplus",
+            "developerName": "Raghav1729",
+            "subtitle": "v19.38.2-3.0.3",
+            "localizedDescription": "",
+            "iconURL": "https://github.com/Raghav1729/uYouPlus/blob/main/icon.png?raw=true",
+            "tintColor": "#5CA399",
+            "screenshotURLs": [],
+            "versions": [
+                {
+                    "absoluteVersion": "uYouPlus_19.38.2-3.0.3.ipa",
+                    "version": "19.38.2-3.0.3.ipa",
+                    "buildVersion": "1",
+                    "date": "2024-09-27T13:33:14Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.38.2-3.0.3/uYouPlus_19.38.2-3.0.3.ipa",
+                    "size": 120294068,
+                    "sha256": ""
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": []
+            },
+            "appID": "raghav1729.uyouplus"
+        },
+        {
+            "name": "v19.37.2-3.0.4",
+            "bundleIdentifier": "raghav1729.uyouplus",
+            "developerName": "Raghav1729",
+            "subtitle": "v19.37.2-3.0.4",
+            "localizedDescription": "**Full Changelog**: https://github.com/Raghav1729/uYouPlus/compare/v19.36.1-3.0.4...v19.37.2-3.0.4",
+            "iconURL": "https://github.com/Raghav1729/uYouPlus/blob/main/icon.png?raw=true",
+            "tintColor": "#5CA399",
+            "screenshotURLs": [],
+            "versions": [
+                {
+                    "absoluteVersion": "uYouPlus_19.37.2-3.0.4.ipa",
+                    "version": "19.37.2-3.0.4.ipa",
+                    "buildVersion": "1",
+                    "date": "2024-09-17T04:02:43Z",
+                    "localizedDescription": "**Full Changelog**: https://github.com/Raghav1729/uYouPlus/compare/v19.36.1-3.0.4...v19.37.2-3.0.4",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.37.2-3.0.4/uYouPlus_19.37.2-3.0.4.ipa",
+                    "size": 120161517,
+                    "sha256": ""
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": []
+            },
+            "appID": "raghav1729.uyouplus"
+        },
+        {
+            "name": "v19.36.1-3.0.4",
+            "bundleIdentifier": "raghav1729.uyouplus",
+            "developerName": "Raghav1729",
+            "subtitle": "v19.36.1-3.0.4",
+            "localizedDescription": "",
+            "iconURL": "https://github.com/Raghav1729/uYouPlus/blob/main/icon.png?raw=true",
+            "tintColor": "#5CA399",
+            "screenshotURLs": [],
+            "versions": [
+                {
+                    "absoluteVersion": "uYouPlus_19.36.1-3.0.4.ipa",
+                    "version": "19.36.1-3.0.4.ipa",
+                    "buildVersion": "1",
+                    "date": "2024-09-10T06:18:06Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.36.1-3.0.4/uYouPlus_19.36.1-3.0.4.ipa",
+                    "size": 119960558,
+                    "sha256": ""
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": []
+            },
+            "appID": "raghav1729.uyouplus"
+        },
+        {
+            "name": "v19.35.3-3.0.4",
+            "bundleIdentifier": "raghav1729.uyouplus",
+            "developerName": "Raghav1729",
+            "subtitle": "v19.35.3-3.0.4",
+            "localizedDescription": "",
+            "iconURL": "https://github.com/Raghav1729/uYouPlus/blob/main/icon.png?raw=true",
+            "tintColor": "#5CA399",
+            "screenshotURLs": [],
+            "versions": [
+                {
+                    "absoluteVersion": "uYouPlus_19.35.3-3.0.4.ipa",
+                    "version": "19.35.3-3.0.4.ipa",
+                    "buildVersion": "1",
+                    "date": "2024-09-03T05:46:40Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.35.3-3.0.4/uYouPlus_19.35.3-3.0.4.ipa",
+                    "size": 119619261,
+                    "sha256": ""
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": []
+            },
+            "appID": "raghav1729.uyouplus"
+        },
+        {
+            "name": "v19.34.2-3.0.4",
+            "bundleIdentifier": "raghav1729.uyouplus",
+            "developerName": "Raghav1729",
+            "subtitle": "v19.34.2-3.0.4",
+            "localizedDescription": "",
+            "iconURL": "https://github.com/Raghav1729/uYouPlus/blob/main/icon.png?raw=true",
+            "tintColor": "#5CA399",
+            "screenshotURLs": [],
+            "versions": [
+                {
+                    "absoluteVersion": "uYouPlus_19.34.2-3.0.4.ipa",
+                    "version": "19.34.2-3.0.4.ipa",
+                    "buildVersion": "1",
+                    "date": "2024-08-27T03:20:09Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.34.2-3.0.4/uYouPlus_19.34.2-3.0.4.ipa",
+                    "size": 119174258,
+                    "sha256": ""
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": []
+            },
+            "appID": "raghav1729.uyouplus"
+        },
+        {
+            "name": "v19.33.2-3.0.4",
+            "bundleIdentifier": "raghav1729.uyouplus",
+            "developerName": "Raghav1729",
+            "subtitle": "v19.33.2-3.0.4",
+            "localizedDescription": "",
+            "iconURL": "https://github.com/Raghav1729/uYouPlus/blob/main/icon.png?raw=true",
+            "tintColor": "#5CA399",
+            "screenshotURLs": [],
+            "versions": [
+                {
+                    "absoluteVersion": "uYouPlus_19.33.2-3.0.4.ipa",
+                    "version": "19.33.2-3.0.4.ipa",
+                    "buildVersion": "1",
+                    "date": "2024-08-19T17:24:56Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.33.2-3.0.4/uYouPlus_19.33.2-3.0.4.ipa",
+                    "size": 118812125,
+                    "sha256": ""
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": []
+            },
+            "appID": "raghav1729.uyouplus"
+        },
+        {
+            "name": "v19.32.8-3.0.4",
+            "bundleIdentifier": "raghav1729.uyouplus",
+            "developerName": "Raghav1729",
+            "subtitle": "v19.32.8-3.0.4",
+            "localizedDescription": "",
+            "iconURL": "https://github.com/Raghav1729/uYouPlus/blob/main/icon.png?raw=true",
+            "tintColor": "#5CA399",
+            "screenshotURLs": [],
+            "versions": [
+                {
+                    "absoluteVersion": "uYouPlus_19.32.8-3.0.4.ipa",
+                    "version": "19.32.8-3.0.4.ipa",
+                    "buildVersion": "1",
+                    "date": "2024-08-14T04:37:55Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.32.8-3.0.4/uYouPlus_19.32.8-3.0.4.ipa",
+                    "size": 118377247,
+                    "sha256": ""
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": []
+            },
+            "appID": "raghav1729.uyouplus"
+        },
+        {
+            "name": "v19.30.2-3.0.4",
+            "bundleIdentifier": "raghav1729.uyouplus",
+            "developerName": "Raghav1729",
+            "subtitle": "v19.30.2-3.0.4",
+            "localizedDescription": "",
+            "iconURL": "https://github.com/Raghav1729/uYouPlus/blob/main/icon.png?raw=true",
+            "tintColor": "#5CA399",
+            "screenshotURLs": [],
+            "versions": [
+                {
+                    "absoluteVersion": "uYouPlus_19.30.2-3.0.4.ipa",
+                    "version": "19.30.2-3.0.4.ipa",
+                    "buildVersion": "1",
+                    "date": "2024-08-06T04:09:37Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.30.2-3.0.4/uYouPlus_19.30.2-3.0.4.ipa",
+                    "size": 118078070,
+                    "sha256": ""
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": []
+            },
+            "appID": "raghav1729.uyouplus"
+        }
+    ],
     "userinfo": {}
 }
