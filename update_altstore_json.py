@@ -1,91 +1,85 @@
 import requests
 import json
-import os
 
-# Paths
-json_file_path = 'apps.json'
+# List of repositories to fetch releases from
+REPOSITORIES = [
+    "Raghav1729/BHTwitter",
+    "Raghav1729/uYouPlus"
+]
 
-# App information template
-app_template = {
-    "beta": False,
-    "bundleIdentifier": "",
-    "developerName": "",
-    "category": "photo-video",
-    "META": {"repoName": ""},
-    "contact": {"web": ""},
-    "downloadURL": "",
-    "iconURL": "",
-    "localizedDescription": "",
-    "name": "",
-    "screenshotURLs": [],
-    "size": 0,
-    "minOSVersion": "",
-    "appPermissions": {"entitlements": [], "privacy": []},
-    "subtitle": "",
-    "tintColor": "",
-    "version": "",
-    "versionDate": "",
-    "versionDescription": ""
-}
+# Base URL for the GitHub API
+GITHUB_API_URL = "https://api.github.com/repos/"
 
-# Helper function to update or add an app entry
-def update_app_entry(apps, new_entry):
-    for app in apps:
-        if app['bundleIdentifier'] == new_entry['bundleIdentifier']:
-            app.update(new_entry)
-            return
-    apps.append(new_entry)
+# Function to fetch the latest release for a given repository
+def fetch_latest_release(repo):
+    response = requests.get(f"{GITHUB_API_URL}{repo}/releases/latest")
+    response.raise_for_status()  # Raise an error for bad responses
+    return response.json()
 
-# Function to fetch the latest release from GitHub
-def get_latest_release(repo):
-    url = f"https://api.github.com/repos/{repo}/releases/latest"
-    response = requests.get(url)
-    if response.status_code == 200:
-        return response.json()
-    else:
-        print(f"Error fetching release for {repo}: {response.status_code}")
-        return None
+# Function to construct the apps.json structure
+def create_apps_json():
+    apps_data = {
+        "name": "Quantum Source",
+        "identifier": "com.quarksources.quantumsource",
+        "apiVersion": "v2",
+        "subtitle": "Contains all of your favorite emulators, games, jailbreaks, utilities, and more.",
+        "description": "This source is an automatically kept up-to-date source, powered by GitHub Actions, the Python altparse library, and the support of independent developers. In here, you'll find anything from community maintained forks of Delta Emulator to tiny Mac utilities that no one's ever heard of. If you have an app you'd like to see here, please use our website to reach out!",
+        "iconURL": "https://quarksources.github.io/assets/ElementQ-Circled.png",
+        "headerURL": "https://quarksources.github.io/assets/quantumsource.png",
+        "website": "https://quarksources.github.io/",
+        "tintColor": "#343a40",
+        "featuredApps": [
+            "com.litritt.ignited",
+            "com.example.mame4ios",
+        ],
+        "apps": [],
+        "userinfo": {}
+    }
 
-# Fetch latest releases for the two repositories
-repos = {
-    "uYouPlus": "Raghav1729/uYouPlus",  # Updated project reference
-    "BHTwitter": "Raghav1729/BHTwitter"
-}
+    for repo in REPOSITORIES:
+        latest_release = fetch_latest_release(repo)
 
-apps = []
-if os.path.exists(json_file_path):
-    with open(json_file_path, 'r') as f:
-        apps = json.load(f).get("apps", [])
+        app_info = {
+            "name": latest_release["name"],
+            "bundleIdentifier": latest_release["id"],
+            "developerName": repo.split("/")[0],
+            "subtitle": latest_release["tag_name"],
+            "localizedDescription": latest_release["body"],
+            "iconURL": latest_release["assets"][0]["browser_download_url"] if latest_release["assets"] else "",
+            "tintColor": "#5CA399",  # Default tint color
+            "screenshotURLs": [asset["browser_download_url"] for asset in latest_release["assets"]],
+            "versions": [
+                {
+                    "absoluteVersion": latest_release["tag_name"],
+                    "version": latest_release["tag_name"],
+                    "buildVersion": "1",
+                    "date": latest_release["published_at"],
+                    "localizedDescription": latest_release["body"],
+                    "downloadURL": latest_release["assets"][0]["browser_download_url"],
+                    "size": latest_release["assets"][0]["size"],
+                    "sha256": latest_release["assets"][0]["sha256"] if "sha256" in latest_release["assets"][0] else ""
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": []
+            },
+            "appID": latest_release["id"]
+        }
 
-for app_name, repo in repos.items():
-    release = get_latest_release(repo)
-    if release:
-        new_app = app_template.copy()
-        new_app.update({
-            "name": app_name,
-            "bundleIdentifier": f"com.{app_name.lower()}",
-            "developerName": "arichornlover & Various Contributors",
-            "downloadURL": release['assets'][0]['browser_download_url'] if release['assets'] else "",
-            "version": release['tag_name'],
-            "versionDate": release['published_at'],
-            "versionDescription": release['body'],
-            "iconURL": f"https://raw.githubusercontent.com/{repo}/master/icon.png",  # Adjust icon URL
-            "subtitle": f"{app_name} is a tweak for the YouTube app.",
-        })
-        update_app_entry(apps, new_app)
+        apps_data["apps"].append(app_info)
 
-# Save updated apps.json
-output_data = {
-    "apps": apps,
-    "identifier": "com.uyouplusextra.source",
-    "name": "uYouPlusExtra Source",
-    "sourceURL": "https://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps.json",
-    "website": "https://github.com/arichornlover/uYouEnhanced",
-    "news": [],
-    "userInfo": {}
-}
+    return apps_data
 
-with open(json_file_path, 'w') as f:
-    json.dump(output_data, f, indent=4)
+# Function to save the apps.json to a file
+def save_apps_json(data):
+    with open("apps.json", "w") as json_file:
+        json.dump(data, json_file, indent=4)
 
-print(f"Updated {json_file_path}")
+# Main function to execute the script
+def main():
+    apps_json_data = create_apps_json()
+    save_apps_json(apps_json_data)
+
+if __name__ == "__main__":
+    main()
