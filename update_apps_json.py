@@ -82,7 +82,7 @@ def create_app_data(repo, releases):
             continue
 
         version_data = {
-            "version": release["tag_name"],  # Use the tag name as the version
+            "version": release["tag_name"].lstrip("v").split('-')[0],  # Remove 'v' and extract version
             "date": release["published_at"],  # Release date
             "localizedDescription": release["body"] or f"Latest updates for {repo.split('/')[-1]}.",  # Use fallback description if body is empty or null
             "minOSVersion": "14.0",  # Minimum OS version required
