@@ -14,7 +14,7 @@ export const sourceURL = urlSearchParams.get('source')?.replaceAll("+", "%2B");
 export const urlRegex = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
 
 export const sources = [
-    "https://raw.githubusercontent.com/Raghav1729/altstore/refs/heads/master/altsore.json"
+    "https://raw.githubusercontent.com/Raghav1729/altstore/refs/heads/master/apps.json"
 ];
 
 export const entitlements = {
