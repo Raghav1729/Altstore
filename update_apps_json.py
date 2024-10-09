@@ -89,7 +89,7 @@ def create_app_data(repo, releases):
                     {"name": "LocationWhenInUse", "usageDescription": "Makes it easier for you to attach location information to your videos and live streams and allows for features such as improved recommendations and ads."},
                     {"name": "Microphone", "usageDescription": "This lets you include audio with your videos and search using your voice."},
                     {"name": "PhotoLibrary", "usageDescription": "This lets you upload media you've already created."},
-                    {"name": "NSUserTrackingUsage-Description", "usageDescription": "User tracking helps YouTube provide personalized content."}
+                    {"name": "UserTracking", "usageDescription": "User tracking helps Twitter provide personalized content."}
                 ]
             }
         })
