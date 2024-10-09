@@ -354,8 +354,8 @@
                         "usageDescription": "This lets you upload media you've already created."
                     },
                     {
-                        "name": "NSUserTrackingUsage-Description",
-                        "usageDescription": "User tracking helps YouTube provide personalized content."
+                        "name": "UserTracking",
+                        "usageDescription": "User tracking helps Twitter provide personalized content."
                     }
                 ]
             }
