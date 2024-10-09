@@ -1,26 +1,26 @@
 import requests
 import json
 
-# Define the repositories
-repositories = [
-    "Raghav1729/BHTwitter",
-    "Raghav1729/uYouPlus"
-]
+# Define the repositories and their respective bundle identifiers
+repositories = {
+    "Raghav1729/BHTwitter": "com.raghav1729.bhtwitter",
+    "Raghav1729/uYouPlus": "com.raghav1729.uYouPlus"
+}
 
 # Prepare the base structure for apps.json
 apps_json_structure = {
     "name": "Raghav Sources",
-    "identifier": "com.google.ios.youtube",
+    "identifier": "com.google.ios.youtube",  # Keeping the identifier as requested
     "apiVersion": "v2",
     "subtitle": "Contains all of build by me",
     "description": "This source is an automatically kept up-to-date source, powered by GitHub Actions, the Python altparse library, and the support of independent developers. In here, you'll find anything from community maintained forks of Delta Emulator, to tiny Mac utilities that no one's ever heard of. If you have an app you'd like to see here, please use our website to reach out!",
-    "iconURL": "",
-    "headerURL": "",
-    "website": "",
+    "iconURL": "",  # Removed generic icon URL
+    "headerURL": "",  # Removed generic header URL
+    "website": "",  # Removed generic website URL
     "tintColor": "#343a40",
     "featuredApps": [
-        "com.google.ios.youtube",
-        "com.atebits.Tweetie2",
+        "com.raghav1729.bhtwitter",  # Updated bundle identifier for BHTwitter
+        "com.raghav1729.uYouPlus",    # Updated bundle identifier for uYouPlus
     ],
     "apps": [],
     "userinfo": {}
@@ -34,17 +34,17 @@ def get_releases(repo):
     return response.json()
 
 # Fetch releases and build the apps section
-for repo in repositories:
+for repo, bundle_identifier in repositories.items():
     releases = get_releases(repo)
     
     # Create an app entry for each repository
     app_data = {
         "name": repo.split('/')[-1],  # Use the repo name as the app name
-        "bundleIdentifier": repo.lower().replace('/', '.'),
+        "bundleIdentifier": bundle_identifier,  # Set the specific bundle identifier
         "developerName": repo.split('/')[0],
         "subtitle": "Latest release information",
         "localizedDescription": f"Latest releases for {repo.split('/')[-1]}.",
-        "iconURL": "https://github.com/" + repo + "/blob/main/icon.png?raw=true",  # Replace with actual icon URL if available
+        "iconURL": "",  # Removed generic icon URL
         "tintColor": "#5CA399",
         "screenshotURLs": [],
         "versions": [],
