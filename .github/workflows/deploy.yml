@@ -8,14 +8,19 @@ on:
     - cron: '0 0 * * 0'  # This runs the workflow every Sunday at midnight UTC.
   workflow_dispatch:  # Allows manual triggering of the workflow.
 
+permissions:
+  contents: write  # Grants write permission to commit and push changes
+
 jobs:
   run-script:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}  # Use the built-in token to push changes
+
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
@@ -35,4 +40,4 @@ jobs:
         git config --local user.name "GitHub Action"
         git add altsore.json
         git commit -m "Update altsore.json with the latest releases" || echo "No changes to commit"
-        git push
+        git push origin HEAD:main  # Push changes back to the repository
