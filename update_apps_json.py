@@ -50,15 +50,15 @@ def create_app_data(repo, bundle_id, releases):
         "bundleIdentifier": bundle_id,  # Set the bundle identifier from the dictionary
         "developerName": repo.split('/')[0],  # Get the developer name from the repo
         "localizedDescription": f"Latest updates for {repo.split('/')[-1]}.",  # Descriptive text for the app
-        "iconURL": "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",  # Updated icon URL
         "tintColor": "#5CA399",  # This can also be customized
         "screenshotURLs": [],  # Placeholder for screenshots
         "versions": [],  # List to hold version details
         "subtitle": "Latest release information",  # Subtitle for the app
     }
 
-    # Assign screenshot URLs based on the repository
+    # Assign icon URL and screenshot URLs based on the repository
     if repo == "Raghav1729/uYouPlus":
+        app_data["iconURL"] = "https://github.com/Raghav1729/Altstore/blob/master/assets/icons/uYou.png"  # Updated icon URL for uYouPlus
         app_data["screenshotURLs"] = [
             "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus1.jpeg?raw=true",
             "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus2.jpeg?raw=true",
@@ -68,13 +68,12 @@ def create_app_data(repo, bundle_id, releases):
             "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/uYouPlus/uyouplus6.jpeg?raw=true"
         ]
     elif repo == "Raghav1729/BHTwitter":
+        app_data["iconURL"] = "https://github.com/Raghav1729/Altstore/blob/master/assets/icons/bhtwitter.jpg"  # Updated icon URL for BHTwitter
         app_data["screenshotURLs"] = [
             "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter1.jpeg?raw=true",
             "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter2.jpeg?raw=true",
             "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter3.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter4.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter5.jpeg?raw=true",
-            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter6.jpeg?raw=true"
+            "https://github.com/Raghav1729/Altstore/blob/master/assets/screenshots/BHTwitter/twitter4.jpeg?raw=true"
         ]
 
     # Add version details for each release
@@ -85,7 +84,7 @@ def create_app_data(repo, bundle_id, releases):
         version_data = {
             "version": release["tag_name"],  # Use the tag name as the version
             "date": release["published_at"],  # Release date
-            "localizedDescription": release["body"] or "",  # Use an empty string if body is empty or null
+            "localizedDescription": release["body"] or f"Latest updates for {repo.split('/')[-1]}.",  # Use fallback description if body is empty or null
             "minOSVersion": "14.0",  # Minimum OS version required
             "downloadURL": release["assets"][0]["browser_download_url"],  # Download link for the first asset
             "size": release["assets"][0]["size"],  # Size of the first asset
