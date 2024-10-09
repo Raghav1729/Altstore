@@ -24,7 +24,7 @@
             ],
             "versions": [
                 {
-                    "version": "4.3",
+                    "version": "10.62",
                     "date": "2024-10-08T17:30:57Z",
                     "localizedDescription": "Latest updates for BHTwitter.",
                     "minOSVersion": "14.0",
@@ -32,7 +32,7 @@
                     "size": 146799700
                 },
                 {
-                    "version": "4.3",
+                    "version": "10.61.2",
                     "date": "2024-10-07T03:58:19Z",
                     "localizedDescription": "Latest updates for BHTwitter.",
                     "minOSVersion": "14.0",
@@ -40,7 +40,7 @@
                     "size": 146770569
                 },
                 {
-                    "version": "4.3",
+                    "version": "10.61",
                     "date": "2024-10-01T05:42:55Z",
                     "localizedDescription": "Latest updates for BHTwitter.",
                     "minOSVersion": "14.0",
@@ -48,7 +48,7 @@
                     "size": 146763198
                 },
                 {
-                    "version": "4.3",
+                    "version": "10.60",
                     "date": "2024-09-27T14:52:42Z",
                     "localizedDescription": "Latest updates for BHTwitter.",
                     "minOSVersion": "14.0",
