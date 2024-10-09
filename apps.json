@@ -59,19 +59,41 @@
             "subtitle": "Latest release information",
             "name": "X",
             "bundleIdentifier": "com.atebits.Tweetie2",
-            "iconURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/BHTwitter.jpg"
+            "iconURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/BHTwitter.jpg",
+            "permissions": [
+                {
+                    "type": "photos",
+                    "usageDescription": "Allows X to access media from your photo library."
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [
+                    {
+                        "name": "get-task-allow"
+                    },
+                    {
+                        "name": "aps-environment"
+                    }
+                ],
+                "privacy": [
+                    {
+                        "name": "LocationWhenInUse",
+                        "usageDescription": "Allows X to attach location to tweets."
+                    }
+                ]
+            }
         },
         {
             "developerName": "Raghav1729",
             "localizedDescription": "Latest updates for uYouPlus.",
             "tintColor": "#5CA399",
             "screenshotURLs": [
-                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus1.jpeg",
-                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus2.jpeg",
-                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus3.jpeg",
-                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus4.jpeg",
-                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus5.jpeg",
-                "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus6.jpeg"
+                "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus1.jpeg?raw=true",
+                "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus2.jpeg?raw=true",
+                "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus3.jpeg?raw=true",
+                "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus4.jpeg?raw=true",
+                "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus5.jpeg?raw=true",
+                "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus6.jpeg?raw=true"
             ],
             "versions": [
                 {
@@ -158,7 +180,105 @@
             "subtitle": "Latest release information",
             "name": "YouTube",
             "bundleIdentifier": "com.google.ios.youtube",
-            "iconURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/uYou.png"
+            "iconURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/uYou.png",
+            "screenshots": [
+                {
+                    "imageURL": "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus1.jpeg?raw=true"
+                },
+                {
+                    "imageURL": "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus2.jpeg?raw=true"
+                },
+                {
+                    "imageURL": "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus3.jpeg?raw=true"
+                },
+                {
+                    "imageURL": "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus4.jpeg?raw=true"
+                },
+                {
+                    "imageURL": "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus5.jpeg?raw=true"
+                },
+                {
+                    "imageURL": "https://github.com/Raghav1729/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus6.jpeg?raw=true"
+                }
+            ],
+            "permissions": [
+                {
+                    "type": "photos",
+                    "usageDescription": "Allows YouTube to upload media from your photo library."
+                },
+                {
+                    "type": "background-audio",
+                    "usageDescription": "Allows YouTube to play audio in the background."
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [
+                    {
+                        "name": "get-task-allow"
+                    },
+                    {
+                        "name": "aps-environment"
+                    },
+                    {
+                        "name": "com.apple.developer.associated-domains"
+                    },
+                    {
+                        "name": "com.apple.developer.coremedia.allow-alternate-video-decoder-selection"
+                    },
+                    {
+                        "name": "com.apple.developer.device-information.user-assigned-device-name"
+                    },
+                    {
+                        "name": "com.apple.developer.networking.multicast"
+                    },
+                    {
+                        "name": "com.apple.developer.networking.wifi-info"
+                    },
+                    {
+                        "name": "com.apple.developer.usernotifications.time-sensitive"
+                    },
+                    {
+                        "name": "com.apple.security.application-groups"
+                    },
+                    {
+                        "name": "keychain-access-groups"
+                    }
+                ],
+                "privacy": [
+                    {
+                        "name": "AppleMusic",
+                        "usageDescription": "This lets you add your own audio files to your videos."
+                    },
+                    {
+                        "name": "BluetoothPeripheral",
+                        "usageDescription": "YouTube needs bluetooth access to scan for nearby Cast devices."
+                    },
+                    {
+                        "name": "Camera",
+                        "usageDescription": "This lets you create videos using the app."
+                    },
+                    {
+                        "name": "Contacts",
+                        "usageDescription": "Your contacts will be sent to YouTube servers to help you find friends to share videos with."
+                    },
+                    {
+                        "name": "LocalNetwork",
+                        "usageDescription": "Access to your network allows YouTube to discover and connect to devices such as your TV."
+                    },
+                    {
+                        "name": "LocationWhenInUse",
+                        "usageDescription": "Makes it easier for you to attach location information to your videos and live streams and allows for features such as improved recommendations and ads."
+                    },
+                    {
+                        "name": "Microphone",
+                        "usageDescription": "This lets you include audio with your videos and search using your voice."
+                    },
+                    {
+                        "name": "PhotoLibrary",
+                        "usageDescription": "This lets you upload media you've already created."
+                    }
+                ]
+            }
         }
     ],
     "userinfo": {},
