@@ -14,7 +14,6 @@
     "apps": [
         {
             "developerName": "Raghav1729",
-            "tintColor": "#5CA399",
             "screenshotURLs": [],
             "versions": [
                 {
@@ -47,6 +46,7 @@
                 }
             ],
             "name": "X",
+            "tintColor": "#5CA399",
             "bundleIdentifier": "com.atebits.Tweetie2",
             "iconURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/BHTwitter.jpg",
             "screenshots": [
@@ -159,7 +159,6 @@
         },
         {
             "developerName": "Raghav1729",
-            "tintColor": "#5CA399",
             "screenshotURLs": [],
             "versions": [
                 {
@@ -256,6 +255,7 @@
                     "imageURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus6.jpeg"
                 }
             ],
+            "tintColor": "#E22A41",
             "localizedDescription": "Watch videos, subscribe to channels, and access personalized content with the enhanced YouTube experience.",
             "subtitle": "Watch, create, and share your favorite content.",
             "appPermissions": {
