@@ -103,7 +103,7 @@ def create_app_data(repo, releases):
             "subtitle": "Real-time social media and microblogging platform.",
             "appPermissions": {
                 "entitlements": [
-                    {"name": "com.apple.developer.devicecheck.ap-pattest-environment"},
+                    {"name": "com.apple.developer.devicecheck.appattest-environment"},
                     {"name": "com.apple.security.application-groups"},
                     {"name": "com.apple.developer.associated-domains"},
                     {"name": "com.apple.developer.replace-plugin"},
