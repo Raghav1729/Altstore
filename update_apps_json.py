@@ -116,7 +116,7 @@ def create_app_data(repo, releases):
                     {"name": "com.apple.developer.networking.wifi-info"}
                 ],
                 "privacy": [
-                    {"name": "Bluetooth", "usageDescription": "Bluetooth access is used for connecting to external devices."},
+                    {"name": "BluetoothAlways", "usageDescription": "Bluetooth access is used for connecting to external devices."},
                     {"name": "Calendars", "usageDescription": "Access to calendars is required for scheduling and event management."},
                     {"name": "Camera", "usageDescription": "Camera access is used for sharing images."},
                     {"name": "Contacts", "usageDescription": "Twitter accesses your contacts to connect you with friends."},
@@ -125,8 +125,8 @@ def create_app_data(repo, releases):
                     {"name": "Location", "usageDescription": "Location data is used to provide personalized experiences."},
                     {"name": "LocationWhenInUse", "usageDescription": "Allows Twitter to access your location when using the app."},
                     {"name": "Microphone", "usageDescription": "Microphone access is needed for voice tweets."},
-                    {"name": "PhotosAdd", "usageDescription": "Allows the app to add photos to your library."},
-                    {"name": "Photos", "usageDescription": "Access to your photo library is required to upload images."},
+                    {"name": "PhotoLibraryAdd", "usageDescription": "Allows the app to add photos to your library."},
+                    {"name": "PhotoLibrary", "usageDescription": "Access to your photo library is required to upload images."},
                     {"name": "SpeechRecognition", "usageDescription": "Allows the app to recognize speech."},
                     {"name": "UserTracking", "usageDescription": "This app requires access to track user activity for personalized content."}
                 ]
