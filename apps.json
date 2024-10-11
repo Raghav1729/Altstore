@@ -68,7 +68,7 @@
             "appPermissions": {
                 "entitlements": [
                     {
-                        "name": "com.apple.developer.devicecheck.ap-pattest-environment"
+                        "name": "com.apple.developer.devicecheck.appattest-environment"
                     },
                     {
                         "name": "com.apple.security.application-groups"
