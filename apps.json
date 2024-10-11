@@ -104,55 +104,55 @@
                 "privacy": [
                     {
                         "name": "BluetoothAlways",
-                        "usageDescription": "Bluetooth access is used for connecting to external devices."
+                        "usageDescription": "Connects to external devices using Bluetooth."
                     },
                     {
                         "name": "Calendars",
-                        "usageDescription": "Access to calendars is required for scheduling and event management."
+                        "usageDescription": "Access calendars for scheduling and event management."
                     },
                     {
                         "name": "Camera",
-                        "usageDescription": "Camera access is used for sharing images."
+                        "usageDescription": "Share images using camera access."
                     },
                     {
                         "name": "Contacts",
-                        "usageDescription": "Twitter accesses your contacts to connect you with friends."
+                        "usageDescription": "Connects you with friends using your contacts."
                     },
                     {
                         "name": "FaceID",
-                        "usageDescription": "Face ID is required for secure logins."
+                        "usageDescription": "Required for secure logins."
                     },
                     {
                         "name": "LocalNetwork",
-                        "usageDescription": "Access to your network allows Twitter to discover and connect to devices."
+                        "usageDescription": "Discovers and connects to devices on your network."
                     },
                     {
                         "name": "Location",
-                        "usageDescription": "Location data is used to provide personalized experiences."
+                        "usageDescription": "Provides personalized experiences using location data."
                     },
                     {
                         "name": "LocationWhenInUse",
-                        "usageDescription": "Allows Twitter to access your location when using the app."
+                        "usageDescription": "Accesses your location while using the app."
                     },
                     {
                         "name": "Microphone",
-                        "usageDescription": "Microphone access is needed for voice tweets."
+                        "usageDescription": "Needed for voice tweets."
                     },
                     {
                         "name": "PhotoLibraryAdd",
-                        "usageDescription": "Allows the app to add photos to your library."
+                        "usageDescription": "Adds photos to your library."
                     },
                     {
                         "name": "PhotoLibrary",
-                        "usageDescription": "Access to your photo library is required to upload images."
+                        "usageDescription": "Uploads images from your photo library."
                     },
                     {
                         "name": "SpeechRecognition",
-                        "usageDescription": "Allows the app to recognize speech."
+                        "usageDescription": "Recognizes speech for enhanced user experience."
                     },
                     {
                         "name": "UserTracking",
-                        "usageDescription": "This app requires access to track user activity for personalized content."
+                        "usageDescription": "Tracks user activity for personalized content."
                     }
                 ]
             }
@@ -257,7 +257,85 @@
                 }
             ],
             "localizedDescription": "Watch videos, subscribe to channels, and access personalized content with the enhanced YouTube experience.",
-            "subtitle": "Watch, create, and share your favorite content."
+            "subtitle": "Watch, create, and share your favorite content.",
+            "appPermissions": {
+                "entitlements": [
+                    {
+                        "name": "com.apple.security.application-groups"
+                    },
+                    {
+                        "name": "com.apple.developer.associated-domains"
+                    },
+                    {
+                        "name": "com.apple.developer.coremedia.allow-alternate-video-decoder-selection"
+                    },
+                    {
+                        "name": "com.apple.developer.usernotifications.time-sensitive"
+                    },
+                    {
+                        "name": "get-task-allow"
+                    },
+                    {
+                        "name": "com.apple.developer.device-information.user-assigned-device-name"
+                    },
+                    {
+                        "name": "com.apple.developer.group-session"
+                    },
+                    {
+                        "name": "keychain-access-groups"
+                    },
+                    {
+                        "name": "com.apple.developer.networking.multicast"
+                    },
+                    {
+                        "name": "aps-environment"
+                    },
+                    {
+                        "name": "com.apple.developer.siri"
+                    },
+                    {
+                        "name": "com.apple.developer.networking.wifi-info"
+                    }
+                ],
+                "privacy": [
+                    {
+                        "name": "AppleMusic",
+                        "usageDescription": "Allows adding audio files to your videos."
+                    },
+                    {
+                        "name": "BluetoothPeripheral",
+                        "usageDescription": "Access to Bluetooth is required to scan for nearby Cast devices."
+                    },
+                    {
+                        "name": "Camera",
+                        "usageDescription": "Allows you to create videos using the app."
+                    },
+                    {
+                        "name": "Contacts",
+                        "usageDescription": "Contacts are sent to YouTube servers to help find friends."
+                    },
+                    {
+                        "name": "LocalNetwork",
+                        "usageDescription": "Access to your network enables discovering and connecting to devices."
+                    },
+                    {
+                        "name": "LocationWhenInUse",
+                        "usageDescription": "Attach location information to videos and improve recommendations."
+                    },
+                    {
+                        "name": "Microphone",
+                        "usageDescription": "Allows including audio in your videos and voice search."
+                    },
+                    {
+                        "name": "PhotoLibrary",
+                        "usageDescription": "Upload media you've already created."
+                    },
+                    {
+                        "name": "UserTracking",
+                        "usageDescription": "Tracks user activity for personalized content."
+                    }
+                ]
+            }
         }
     ],
     "userinfo": {},
