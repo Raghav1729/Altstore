@@ -136,4 +136,24 @@ def create_app_data(repo, releases):
     # Add the releases to the app data
     for release in releases:
         version_info = {
-            "version": release["tag_name"].lstrip("v").split('-')[1] if repo == "Raghav1729/BHTwitter" else release
+            "version": release["tag_name"].lstrip("v").split('-')[1] if repo == "Raghav1729/BHTwitter" else release["tag_name"].lstrip("v").split('-')[0],
+            "date": release["published_at"],
+            "localizedDescription": release.get("body", ""),  # Use get to avoid KeyError
+            "downloadURL": release["assets"][0]["browser_download_url"],
+            "size": release["assets"][0]["size"]
+        }
+        app_data["versions"].append(version_info)
+
+    return app_data
+
+# Populate the apps array
+for repo in REPOSITORIES:
+    releases = get_releases(repo)
+    app_data = create_app_data(repo, releases)
+    APPS_JSON_STRUCTURE["apps"].append(app_data)
+
+# Write to apps.json file
+with open("apps.json", "w") as f:
+    json.dump(APPS_JSON_STRUCTURE, f, indent=4)
+
+print("apps.json has been generated successfully.")
