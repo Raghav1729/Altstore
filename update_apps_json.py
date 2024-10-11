@@ -46,6 +46,7 @@ def create_app_data(repo, releases):
     app_data = {
         "developerName": repo.split('/')[0],
         "screenshotURLs": [],
+        "tintColor": "#5CA399",
         "versions": [],
     }
 
@@ -58,7 +59,6 @@ def create_app_data(repo, releases):
                 {"imageURL": f"https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus{i}.jpeg"}
                 for i in range(1, 7)
             ],
-            "tintColor": "#E22A41",
             "localizedDescription": "Watch videos, subscribe to channels, and access personalized content with the enhanced YouTube experience.",
             "subtitle": "Watch, create, and share your favorite content.",
             "appPermissions": {
@@ -93,7 +93,6 @@ def create_app_data(repo, releases):
     elif repo == "Raghav1729/BHTwitter":
         app_data.update({
             "name": "X",
-            "tintColor": "#5CA399",
             "bundleIdentifier": "com.atebits.Tweetie2",
             "iconURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/BHTwitter.jpg",
             "screenshots": [
