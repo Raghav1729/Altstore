@@ -45,11 +45,9 @@ def create_app_data(repo, releases):
     """Create app data structure from repository and releases."""
     app_data = {
         "developerName": repo.split('/')[0],
-        "localizedDescription": f"Latest updates for {repo.split('/')[-1]}.",
         "tintColor": "#5CA399",
         "screenshotURLs": [],
         "versions": [],
-        "subtitle": "Latest release information"
     }
 
     if repo == "Raghav1729/uYouPlus":
@@ -61,6 +59,8 @@ def create_app_data(repo, releases):
                 {"imageURL": f"https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus{i}.jpeg"}
                 for i in range(1, 7)
             ],
+            "localizedDescription": "Watch videos, subscribe to channels, and access personalized content with the enhanced YouTube experience.",
+            "subtitle": "Watch, create, and share your favorite content.",
             "appPermissions": {
                 "entitlements": [
                     {"name": "com.apple.developer.associated-domains"},
@@ -73,12 +73,12 @@ def create_app_data(repo, releases):
                     {"name": "com.apple.developer.networking.wifi-info"}
                 ],
                 "privacy": [
-                    {"name": "NSBluetoothAlwaysUsageDescription", "usageDescription": "Bluetooth access is used for connecting to external devices."},
-                    {"name": "NSCameraUsageDescription", "usageDescription": "Camera access is needed for recording and uploading videos."},
-                    {"name": "NSMicrophoneUsageDescription", "usageDescription": "Microphone access is required for voiceovers and comments."},
-                    {"name": "NSLocationWhenInUseUsageDescription", "usageDescription": "Location data is used to provide personalized content."},
-                    {"name": "NSPhotoLibraryUsageDescription", "usageDescription": "Access to your photo library is required to upload photos and videos."},
-                    {"name": "NSContactsUsageDescription", "usageDescription": "YouTube accesses your contacts to suggest friends."}
+                    {"name": "Bluetooth", "usageDescription": "Bluetooth access is used for connecting to external devices."},
+                    {"name": "Camera", "usageDescription": "Camera access is needed for recording and uploading videos."},
+                    {"name": "Microphone", "usageDescription": "Microphone access is required for voiceovers and comments."},
+                    {"name": "Location", "usageDescription": "Location data is used to provide personalized content."},
+                    {"name": "Photo Library", "usageDescription": "Access to your photo library is required to upload photos and videos."},
+                    {"name": "Contacts", "usageDescription": "YouTube accesses your contacts to suggest friends."}
                 ]
             }
         })
@@ -92,6 +92,8 @@ def create_app_data(repo, releases):
                 {"imageURL": f"https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter{i}.png"}
                 for i in range(1, 5)
             ],
+            "localizedDescription": "Stay updated with real-time conversations, news, and trending topics on the X platform.",
+            "subtitle": "Real-time social media and microblogging platform.",
             "appPermissions": {
                 "entitlements": [
                     {"name": "com.apple.developer.devicecheck.ap-pattest-environment"},
@@ -106,12 +108,12 @@ def create_app_data(repo, releases):
                     {"name": "com.apple.developer.networking.wifi-info"}
                 ],
                 "privacy": [
-                    {"name": "NSBluetoothAlwaysUsageDescription", "usageDescription": "Bluetooth access is used for connecting to external devices."},
-                    {"name": "NSContactsUsageDescription", "usageDescription": "Twitter accesses your contacts to connect you with friends."},
-                    {"name": "NSFaceIDUsageDescription", "usageDescription": "Face ID is required for secure logins."},
-                    {"name": "NSLocationWhenInUseUsageDescription", "usageDescription": "Location data is used to provide personalized experiences."},
-                    {"name": "NSMicrophoneUsageDescription", "usageDescription": "Microphone access is needed for voice tweets."},
-                    {"name": "NSCameraUsageDescription", "usageDescription": "Camera access is used for sharing images."}
+                    {"name": "Bluetooth", "usageDescription": "Bluetooth access is used for connecting to external devices."},
+                    {"name": "Contacts", "usageDescription": "Twitter accesses your contacts to connect you with friends."},
+                    {"name": "Face ID", "usageDescription": "Face ID is required for secure logins."},
+                    {"name": "Location", "usageDescription": "Location data is used to provide personalized experiences."},
+                    {"name": "Microphone", "usageDescription": "Microphone access is needed for voice tweets."},
+                    {"name": "Camera", "usageDescription": "Camera access is used for sharing images."}
                 ]
             }
         })
