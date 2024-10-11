@@ -60,27 +60,7 @@ def create_app_data(repo, releases):
                 for i in range(1, 7)
             ],
             "localizedDescription": "Watch videos, subscribe to channels, and access personalized content with the enhanced YouTube experience.",
-            "subtitle": "Watch, create, and share your favorite content.",
-            "appPermissions": {
-                "entitlements": [
-                    {"name": "com.apple.developer.associated-domains"},
-                    {"name": "aps-environment"},
-                    {"name": "com.apple.developer.usernotifications.communication"},
-                    {"name": "com.apple.developer.usernotifications.time-sensitive"},
-                    {"name": "com.apple.developer.applesignin"},
-                    {"name": "com.apple.security.application-groups"},
-                    {"name": "keychain-access-groups"},
-                    {"name": "com.apple.developer.networking.wifi-info"}
-                ],
-                "privacy": [
-                    {"name": "Bluetooth", "usageDescription": "Bluetooth access is used for connecting to external devices."},
-                    {"name": "Camera", "usageDescription": "Camera access is needed for recording and uploading videos."},
-                    {"name": "Microphone", "usageDescription": "Microphone access is required for voiceovers and comments."},
-                    {"name": "Location", "usageDescription": "Location data is used to provide personalized content."},
-                    {"name": "Photo Library", "usageDescription": "Access to your photo library is required to upload photos and videos."},
-                    {"name": "Contacts", "usageDescription": "YouTube accesses your contacts to suggest friends."}
-                ]
-            }
+            "subtitle": "Watch, create, and share your favorite content."
         })
     
     elif repo == "Raghav1729/BHTwitter":
@@ -93,29 +73,7 @@ def create_app_data(repo, releases):
                 for i in range(1, 5)
             ],
             "localizedDescription": "Stay updated with real-time conversations, news, and trending topics on the X platform.",
-            "subtitle": "Real-time social media and microblogging platform.",
-            "appPermissions": {
-                "entitlements": [
-                    {"name": "com.apple.developer.devicecheck.ap-pattest-environment"},
-                    {"name": "com.apple.developer.associated-domains"},
-                    {"name": "com.apple.developer.replace-plugin"},
-                    {"name": "com.apple.developer.usernotifications.communication"},
-                    {"name": "com.apple.developer.usernotifications.time-sensitive"},
-                    {"name": "aps-environment"},
-                    {"name": "com.apple.developer.applesignin"},
-                    {"name": "com.apple.security.application-groups"},
-                    {"name": "keychain-access-groups"},
-                    {"name": "com.apple.developer.networking.wifi-info"}
-                ],
-                "privacy": [
-                    {"name": "Bluetooth", "usageDescription": "Bluetooth access is used for connecting to external devices."},
-                    {"name": "Contacts", "usageDescription": "Twitter accesses your contacts to connect you with friends."},
-                    {"name": "Face ID", "usageDescription": "Face ID is required for secure logins."},
-                    {"name": "Location", "usageDescription": "Location data is used to provide personalized experiences."},
-                    {"name": "Microphone", "usageDescription": "Microphone access is needed for voice tweets."},
-                    {"name": "Camera", "usageDescription": "Camera access is used for sharing images."}
-                ]
-            }
+            "subtitle": "Real-time social media and microblogging platform."
         })
 
     # Add the releases to the app data
