@@ -61,35 +61,24 @@ def create_app_data(repo, releases):
                 {"imageURL": f"https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/uYouPlus/uyouplus{i}.jpeg"}
                 for i in range(1, 7)
             ],
-            "permissions": [
-                {"type": "contact-info", "usageDescription": "YouTube accesses contact information to track users across apps."},
-                {"type": "identifiers", "usageDescription": "Identifiers are used to track users across apps and websites."}
-            ],
             "appPermissions": {
                 "entitlements": [
-                    {"name": "get-task-allow"},
-                    {"name": "aps-environment"},
                     {"name": "com.apple.developer.associated-domains"},
-                    {"name": "com.apple.developer.coremedia.allow-alternate-video-decoder-selection"},
-                    {"name": "com.apple.developer.device-information.user-assigned-device-name"},
-                    {"name": "com.apple.developer.networking.multicast"},
-                    {"name": "com.apple.developer.networking.wifi-info"},
+                    {"name": "aps-environment"},
+                    {"name": "com.apple.developer.usernotifications.communication"},
                     {"name": "com.apple.developer.usernotifications.time-sensitive"},
+                    {"name": "com.apple.developer.applesignin"},
                     {"name": "com.apple.security.application-groups"},
                     {"name": "keychain-access-groups"},
-                    {"name": "com.apple.developer.group-session"},
-                    {"name": "com.apple.developer.siri"}
+                    {"name": "com.apple.developer.networking.wifi-info"}
                 ],
                 "privacy": [
-                    {"name": "AppleMusic", "usageDescription": "This lets you add your own audio files to your videos."},
-                    {"name": "BluetoothPeripheral", "usageDescription": "YouTube needs bluetooth access to scan for nearby Cast devices."},
-                    {"name": "Camera", "usageDescription": "This lets you create videos using the app."},
-                    {"name": "Contacts", "usageDescription": "Your contacts will be sent to YouTube servers to help you find friends to share videos with."},
-                    {"name": "LocalNetwork", "usageDescription": "Access to your network allows YouTube to discover and connect to devices such as your TV."},
-                    {"name": "LocationWhenInUse", "usageDescription": "Makes it easier for you to attach location information to your videos and live streams and allows for features such as improved recommendations and ads."},
-                    {"name": "Microphone", "usageDescription": "This lets you include audio with your videos and search using your voice."},
-                    {"name": "PhotoLibrary", "usageDescription": "This lets you upload media you've already created."},
-                    {"name": "UserTracking", "usageDescription": "User tracking helps Twitter provide personalized content."}
+                    {"name": "NSBluetoothAlwaysUsageDescription", "usageDescription": "Bluetooth access is used for connecting to external devices."},
+                    {"name": "NSCameraUsageDescription", "usageDescription": "Camera access is needed for recording and uploading videos."},
+                    {"name": "NSMicrophoneUsageDescription", "usageDescription": "Microphone access is required for voiceovers and comments."},
+                    {"name": "NSLocationWhenInUseUsageDescription", "usageDescription": "Location data is used to provide personalized content."},
+                    {"name": "NSPhotoLibraryUsageDescription", "usageDescription": "Access to your photo library is required to upload photos and videos."},
+                    {"name": "NSContactsUsageDescription", "usageDescription": "YouTube accesses your contacts to suggest friends."}
                 ]
             }
         })
@@ -103,15 +92,6 @@ def create_app_data(repo, releases):
                 {"imageURL": f"https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/screenshots/BHTwitter/twitter{i}.png"}
                 for i in range(1, 5)
             ],
-            "permissions": [
-                {"type": "purchases", "usageDescription": "Twitter collects data related to your purchases for better ad targeting."},
-                {"type": "location", "usageDescription": "Twitter uses location data for tailored content and advertisements."},
-                {"type": "contact-info", "usageDescription": "Twitter accesses your contact info to help connect you with others."},
-                {"type": "user-content", "usageDescription": "User-generated content may be used for service improvement."},
-                {"type": "browsing-history", "usageDescription": "Browsing history is used for personalized content."},
-                {"type": "identifiers", "usageDescription": "Identifiers are used for tracking across applications."},
-                {"type": "usage-data", "usageDescription": "Usage data helps Twitter improve its services."}
-            ],
             "appPermissions": {
                 "entitlements": [
                     {"name": "com.apple.developer.devicecheck.ap-pattest-environment"},
@@ -121,20 +101,17 @@ def create_app_data(repo, releases):
                     {"name": "com.apple.developer.usernotifications.time-sensitive"},
                     {"name": "aps-environment"},
                     {"name": "com.apple.developer.applesignin"},
-                    {"name": "com.apple.developer.siri"}
+                    {"name": "com.apple.security.application-groups"},
+                    {"name": "keychain-access-groups"},
+                    {"name": "com.apple.developer.networking.wifi-info"}
                 ],
                 "privacy": [
-                    {"name": "Bluetooth", "usageDescription": "Bluetooth access is needed for connecting to devices."},
-                    {"name": "Calendars", "usageDescription": "Access to your calendars is required for scheduling tweets."},
-                    {"name": "Camera", "usageDescription": "Camera access is necessary for taking photos and videos directly from the app."},
-                    {"name": "Face ID", "usageDescription": "Face ID is used for secure logins."},
-                    {"name": "LocalNetwork", "usageDescription": "Access to your local network is needed for discovering devices."},
-                    {"name": "LocationWhenInUse", "usageDescription": "Location access is necessary to provide tailored experiences."},
-                    {"name": "Microphone", "usageDescription": "Microphone access is required for voice tweets."},
-                    {"name": "PhotoLibraryAdd", "usageDescription": "Access to your photo library is needed for uploading images."},
-                    {"name": "PhotoLibrary", "usageDescription": "Twitter may access your photo library to share photos."},
-                    {"name": "SpeechRecognition", "usageDescription": "Speech recognition is required for voice commands."},
-                    {"name": "UserTracking", "usageDescription": "User tracking helps Twitter provide personalized content."}
+                    {"name": "NSBluetoothAlwaysUsageDescription", "usageDescription": "Bluetooth access is used for connecting to external devices."},
+                    {"name": "NSContactsUsageDescription", "usageDescription": "Twitter accesses your contacts to connect you with friends."},
+                    {"name": "NSFaceIDUsageDescription", "usageDescription": "Face ID is required for secure logins."},
+                    {"name": "NSLocationWhenInUseUsageDescription", "usageDescription": "Location data is used to provide personalized experiences."},
+                    {"name": "NSMicrophoneUsageDescription", "usageDescription": "Microphone access is needed for voice tweets."},
+                    {"name": "NSCameraUsageDescription", "usageDescription": "Camera access is used for sharing images."}
                 ]
             }
         })
