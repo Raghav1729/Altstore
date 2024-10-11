@@ -103,7 +103,7 @@
                 ],
                 "privacy": [
                     {
-                        "name": "Bluetooth",
+                        "name": "BluetoothAlways",
                         "usageDescription": "Bluetooth access is used for connecting to external devices."
                     },
                     {
@@ -139,11 +139,11 @@
                         "usageDescription": "Microphone access is needed for voice tweets."
                     },
                     {
-                        "name": "PhotosAdd",
+                        "name": "PhotoLibraryAdd",
                         "usageDescription": "Allows the app to add photos to your library."
                     },
                     {
-                        "name": "Photos",
+                        "name": "PhotoLibrary",
                         "usageDescription": "Access to your photo library is required to upload images."
                     },
                     {
