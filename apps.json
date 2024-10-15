@@ -163,6 +163,13 @@
             "tintColor": "#5CA399",
             "versions": [
                 {
+                    "version": "19.41.3",
+                    "date": "2024-10-14T12:03:28Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.41.3-3.0.4/uYouPlus_19.41.3-3.0.4.ipa",
+                    "size": 120940183
+                },
+                {
                     "version": "19.39.1",
                     "date": "2024-10-01T05:50:02Z",
                     "localizedDescription": "",
