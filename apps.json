@@ -18,6 +18,13 @@
             "tintColor": "#5CA399",
             "versions": [
                 {
+                    "version": "10.71.1",
+                    "date": "2024-12-13T14:01:03Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.71.1/BHTwitter-sideloaded_4.3_10.71.1.ipa",
+                    "size": 176075477
+                },
+                {
                     "version": "10.70",
                     "date": "2024-12-04T04:51:54Z",
                     "localizedDescription": "",
@@ -246,6 +253,20 @@
             "screenshotURLs": [],
             "tintColor": "#5CA399",
             "versions": [
+                {
+                    "version": "19.49.5",
+                    "date": "2024-12-12T08:24:24Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.49.5-3.0.4/uYouPlus_19.49.5-3.0.4.ipa",
+                    "size": 122040212
+                },
+                {
+                    "version": "19.49.3",
+                    "date": "2024-12-09T04:46:28Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.49.3-3.0.4/uYouPlus_19.49.3-3.0.4.ipa",
+                    "size": 122041955
+                },
                 {
                     "version": "19.47.7",
                     "date": "2024-11-25T12:11:01Z",
