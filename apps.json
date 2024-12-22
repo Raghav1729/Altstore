@@ -18,6 +18,13 @@
             "tintColor": "#5CA399",
             "versions": [
                 {
+                    "version": "10.72",
+                    "date": "2024-12-17T03:23:48Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.72/BHTwitter-sideloaded_4.3_10.72.ipa",
+                    "size": 184867712
+                },
+                {
                     "version": "10.71.1",
                     "date": "2024-12-13T14:01:03Z",
                     "localizedDescription": "",
@@ -44,97 +51,6 @@
                     "localizedDescription": "",
                     "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.69/BHTwitter-sideloaded_4.3_10.69.ipa",
                     "size": 178032686
-                },
-                {
-                    "version": "10.68.1",
-                    "date": "2024-11-25T03:38:57Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.68.1/BHTwitter-sideloaded_4.3_10.68.1.ipa",
-                    "size": 177903053
-                },
-                {
-                    "version": "10.68",
-                    "date": "2024-11-19T11:13:18Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.68/BHTwitter-sideloaded_4.3_10.68.ipa",
-                    "size": 177884968
-                },
-                {
-                    "version": "10.67.1",
-                    "date": "2024-11-18T09:11:00Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.67.1/BHTwitter-sideloaded_4.3_10.67.1.ipa",
-                    "size": 159985731
-                },
-                {
-                    "version": "10.67",
-                    "date": "2024-11-13T14:15:22Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.67/BHTwitter-sideloaded_4.3_10.67.ipa",
-                    "size": 159989217
-                },
-                {
-                    "version": "10.66.2",
-                    "date": "2024-11-11T05:04:07Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.66.2/BHTwitter-sideloaded_4.3_10.66.2.ipa",
-                    "size": 159533565
-                },
-                {
-                    "version": "10.65.2",
-                    "date": "2024-11-04T08:56:32Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.65.2/BHTwitter-sideloaded_4.3_10.65.2.ipa",
-                    "size": 150480080
-                },
-                {
-                    "version": "10.64.1",
-                    "date": "2024-10-23T03:43:36Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.64.1/BHTwitter-sideloaded_4.3_10.64.1.ipa",
-                    "size": 150280127
-                },
-                {
-                    "version": "10.63.1",
-                    "date": "2024-10-21T08:49:45Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.63.1/BHTwitter-sideloaded_4.3_10.63.1.ipa",
-                    "size": 145192434
-                },
-                {
-                    "version": "10.63",
-                    "date": "2024-10-16T04:57:48Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.63/BHTwitter-sideloaded_4.3_10.63.ipa",
-                    "size": 146942016
-                },
-                {
-                    "version": "10.62",
-                    "date": "2024-10-08T17:30:57Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.62/BHTwitter-sideloaded_4.3_10.62.ipa",
-                    "size": 146799700
-                },
-                {
-                    "version": "10.61.2",
-                    "date": "2024-10-07T03:58:19Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.61.2/BHTwitter-sideloaded_4.3_10.61.2.ipa",
-                    "size": 146770569
-                },
-                {
-                    "version": "10.61",
-                    "date": "2024-10-01T05:42:55Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.61/BHTwitter-sideloaded_4.3_10.61.ipa",
-                    "size": 146763198
-                },
-                {
-                    "version": "10.60",
-                    "date": "2024-09-27T14:52:42Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.60/BHTwitter-sideloaded_4.3_10.60.ipa",
-                    "size": 146538707
                 }
             ],
             "name": "X",
@@ -254,18 +170,18 @@
             "tintColor": "#5CA399",
             "versions": [
                 {
+                    "version": "19.49.7",
+                    "date": "2024-12-17T03:28:28Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.49.7-3.0.4/uYouPlus_19.49.7-3.0.4.ipa",
+                    "size": 122039882
+                },
+                {
                     "version": "19.49.5",
                     "date": "2024-12-12T08:24:24Z",
                     "localizedDescription": "",
                     "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.49.5-3.0.4/uYouPlus_19.49.5-3.0.4.ipa",
                     "size": 122040212
-                },
-                {
-                    "version": "19.49.3",
-                    "date": "2024-12-09T04:46:28Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.49.3-3.0.4/uYouPlus_19.49.3-3.0.4.ipa",
-                    "size": 122041955
                 },
                 {
                     "version": "19.47.7",
@@ -287,97 +203,6 @@
                     "localizedDescription": "",
                     "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.45.4-3.0.4/uYouPlus_19.45.4-3.0.4.ipa",
                     "size": 121816733
-                },
-                {
-                    "version": "19.44.4",
-                    "date": "2024-11-06T05:08:48Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.44.4-3.0.4/uYouPlus_19.44.4-3.0.4.ipa",
-                    "size": 121555832
-                },
-                {
-                    "version": "19.43.2",
-                    "date": "2024-10-28T09:49:00Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.43.2-3.0.4/uYouPlus_19.43.2-3.0.4.ipa",
-                    "size": 121399464
-                },
-                {
-                    "version": "19.42.1",
-                    "date": "2024-10-23T03:42:06Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.42.1-3.0.4/uYouPlus_19.42.1-3.0.4.ipa",
-                    "size": 121062673
-                },
-                {
-                    "version": "19.41.3",
-                    "date": "2024-10-14T12:03:28Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.41.3-3.0.4/uYouPlus_19.41.3-3.0.4.ipa",
-                    "size": 120940183
-                },
-                {
-                    "version": "19.39.1",
-                    "date": "2024-10-01T05:50:02Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.39.1-3.0.4/uYouPlus_19.39.1-3.0.4.ipa",
-                    "size": 120732542
-                },
-                {
-                    "version": "19.38.2",
-                    "date": "2024-09-27T13:33:14Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.38.2-3.0.3/uYouPlus_19.38.2-3.0.3.ipa",
-                    "size": 120294068
-                },
-                {
-                    "version": "19.37.2",
-                    "date": "2024-09-17T04:02:43Z",
-                    "localizedDescription": "**Full Changelog**: https://github.com/Raghav1729/uYouPlus/compare/v19.36.1-3.0.4...v19.37.2-3.0.4",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.37.2-3.0.4/uYouPlus_19.37.2-3.0.4.ipa",
-                    "size": 120161517
-                },
-                {
-                    "version": "19.36.1",
-                    "date": "2024-09-10T06:18:06Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.36.1-3.0.4/uYouPlus_19.36.1-3.0.4.ipa",
-                    "size": 119960558
-                },
-                {
-                    "version": "19.35.3",
-                    "date": "2024-09-03T05:46:40Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.35.3-3.0.4/uYouPlus_19.35.3-3.0.4.ipa",
-                    "size": 119619261
-                },
-                {
-                    "version": "19.34.2",
-                    "date": "2024-08-27T03:20:09Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.34.2-3.0.4/uYouPlus_19.34.2-3.0.4.ipa",
-                    "size": 119174258
-                },
-                {
-                    "version": "19.33.2",
-                    "date": "2024-08-19T17:24:56Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.33.2-3.0.4/uYouPlus_19.33.2-3.0.4.ipa",
-                    "size": 118812125
-                },
-                {
-                    "version": "19.32.8",
-                    "date": "2024-08-14T04:37:55Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.32.8-3.0.4/uYouPlus_19.32.8-3.0.4.ipa",
-                    "size": 118377247
-                },
-                {
-                    "version": "19.30.2",
-                    "date": "2024-08-06T04:09:37Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.30.2-3.0.4/uYouPlus_19.30.2-3.0.4.ipa",
-                    "size": 118078070
                 }
             ],
             "name": "YouTube",
