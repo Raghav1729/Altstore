@@ -18,6 +18,20 @@
             "tintColor": "#5CA399",
             "versions": [
                 {
+                    "version": "10.76.1",
+                    "date": "2025-01-17T15:29:42Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.76.1/BHTwitter-sideloaded_4.3_10.76.1.ipa",
+                    "size": 168343038
+                },
+                {
+                    "version": "10.76",
+                    "date": "2025-01-12T09:44:35Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.76/BHTwitter-sideloaded_4.3_10.76.ipa",
+                    "size": 168342480
+                },
+                {
                     "version": "10.75",
                     "date": "2025-01-07T07:48:53Z",
                     "localizedDescription": "",
@@ -37,20 +51,6 @@
                     "localizedDescription": "",
                     "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.72.2/BHTwitter-sideloaded_4.3_10.72.2.ipa",
                     "size": 180895394
-                },
-                {
-                    "version": "10.72.1",
-                    "date": "2024-12-22T05:04:41Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.72.1/BHTwitter-sideloaded_4.3_10.72.1.ipa",
-                    "size": 180885027
-                },
-                {
-                    "version": "10.72",
-                    "date": "2024-12-17T03:23:48Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.72/BHTwitter-sideloaded_4.3_10.72.ipa",
-                    "size": 184867712
                 }
             ],
             "name": "X",
@@ -170,6 +170,13 @@
             "tintColor": "#5CA399",
             "versions": [
                 {
+                    "version": "20.02.3",
+                    "date": "2025-01-18T13:38:38Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v20.02.3-3.0.4/uYouPlus_20.02.3-3.0.4.ipa",
+                    "size": 122122144
+                },
+                {
                     "version": "19.49.7",
                     "date": "2024-12-17T03:28:28Z",
                     "localizedDescription": "",
@@ -196,13 +203,6 @@
                     "localizedDescription": "",
                     "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.46.3-3.0.4/uYouPlus_19.46.3-3.0.4.ipa",
                     "size": 121661465
-                },
-                {
-                    "version": "19.45.4",
-                    "date": "2024-11-12T07:59:08Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.45.4-3.0.4/uYouPlus_19.45.4-3.0.4.ipa",
-                    "size": 121816733
                 }
             ],
             "name": "YouTube",
