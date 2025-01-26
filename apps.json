@@ -18,6 +18,13 @@
             "tintColor": "#5CA399",
             "versions": [
                 {
+                    "version": "10.77.1",
+                    "date": "2025-01-23T06:05:07Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.77.1/BHTwitter-sideloaded_4.3_10.77.1.ipa",
+                    "size": 168749205
+                },
+                {
                     "version": "10.76.1",
                     "date": "2025-01-17T15:29:42Z",
                     "localizedDescription": "",
@@ -37,20 +44,6 @@
                     "localizedDescription": "",
                     "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.75/BHTwitter-sideloaded_4.3_10.75.ipa",
                     "size": 167930661
-                },
-                {
-                    "version": "10.74",
-                    "date": "2025-01-04T10:37:27Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.74/BHTwitter-sideloaded_4.3_10.74.ipa",
-                    "size": 167817943
-                },
-                {
-                    "version": "10.72.2",
-                    "date": "2024-12-30T04:15:33Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.72.2/BHTwitter-sideloaded_4.3_10.72.2.ipa",
-                    "size": 180895394
                 }
             ],
             "name": "X",
@@ -196,13 +189,6 @@
                     "localizedDescription": "",
                     "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.47.7-3.0.4/uYouPlus_19.47.7-3.0.4.ipa",
                     "size": 121783561
-                },
-                {
-                    "version": "19.46.3",
-                    "date": "2024-11-19T12:04:50Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v19.46.3-3.0.4/uYouPlus_19.46.3-3.0.4.ipa",
-                    "size": 121661465
                 }
             ],
             "name": "YouTube",
