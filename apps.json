@@ -18,6 +18,20 @@
             "tintColor": "#5CA399",
             "versions": [
                 {
+                    "version": "10.83.2",
+                    "date": "2025-03-08T15:51:54Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.83.2/BHTwitter-sideloaded_4.3_10.83.2.ipa",
+                    "size": 162570504
+                },
+                {
+                    "version": "10.83.1",
+                    "date": "2025-03-06T04:14:55Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.83.1/BHTwitter-sideloaded_4.3_10.83.1.ipa",
+                    "size": 162570788
+                },
+                {
                     "version": "10.83",
                     "date": "2025-03-04T04:47:19Z",
                     "localizedDescription": "",
@@ -37,20 +51,6 @@
                     "localizedDescription": "",
                     "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.81.2/BHTwitter-sideloaded_4.3_10.81.2.ipa",
                     "size": 167312122
-                },
-                {
-                    "version": "10.80",
-                    "date": "2025-02-11T12:53:16Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.80/BHTwitter-sideloaded_4.3_10.80.ipa",
-                    "size": 166639559
-                },
-                {
-                    "version": "10.79.2",
-                    "date": "2025-02-09T07:09:20Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.79.2/BHTwitter-sideloaded_4.3_10.79.2.ipa",
-                    "size": 165830053
                 }
             ],
             "name": "X",
