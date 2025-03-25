@@ -18,6 +18,13 @@
             "tintColor": "#5CA399",
             "versions": [
                 {
+                    "version": "10.87",
+                    "date": "2025-03-25T04:31:30Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.87/BHTwitter-sideloaded_4.3_10.87.ipa",
+                    "size": 162372369
+                },
+                {
                     "version": "10.86",
                     "date": "2025-03-20T05:28:40Z",
                     "localizedDescription": "",
@@ -44,13 +51,6 @@
                     "localizedDescription": "",
                     "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.84/BHTwitter-sideloaded_4.3_10.84.ipa",
                     "size": 162852122
-                },
-                {
-                    "version": "10.83.2",
-                    "date": "2025-03-08T15:51:54Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.83.2/BHTwitter-sideloaded_4.3_10.83.2.ipa",
-                    "size": 162570504
                 }
             ],
             "name": "X",
@@ -170,6 +170,13 @@
             "tintColor": "#5CA399",
             "versions": [
                 {
+                    "version": "20.12.4",
+                    "date": "2025-03-25T04:38:51Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v20.12.4-3.0.4/uYouPlus_20.12.4-3.0.4.ipa",
+                    "size": 123784954
+                },
+                {
                     "version": "20.11.6",
                     "date": "2025-03-20T05:29:20Z",
                     "localizedDescription": "",
@@ -196,13 +203,6 @@
                     "localizedDescription": "",
                     "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v20.09.3-3.0.4/uYouPlus_20.09.3-3.0.4.ipa",
                     "size": 123075697
-                },
-                {
-                    "version": "20.08.3",
-                    "date": "2025-03-02T07:36:10Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v20.08.3-3.0.4/uYouPlus_20.08.3-3.0.4.ipa",
-                    "size": 122875602
                 }
             ],
             "name": "YouTube",
