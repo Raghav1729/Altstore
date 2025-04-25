@@ -16,7 +16,29 @@
             "developerName": "Raghav1729",
             "screenshotURLs": [],
             "tintColor": "#5CA399",
-            "versions": [],
+            "versions": [
+                {
+                    "version": "10.93",
+                    "date": "2025-04-17T20:59:52Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.93/BHTwitter-sideloaded_4.3_10.93.ipa",
+                    "size": 166550018
+                },
+                {
+                    "version": "10.92",
+                    "date": "2025-04-15T04:35:01Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.92/BHTwitter-sideloaded_4.3_10.92.ipa",
+                    "size": 166490612
+                },
+                {
+                    "version": "10.91",
+                    "date": "2025-04-14T14:53:42Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v4.3-10.91/BHTwitter-sideloaded_4.3_10.91.ipa",
+                    "size": 166048275
+                }
+            ],
             "name": "X",
             "bundleIdentifier": "com.atebits.Tweetie2",
             "iconURL": "https://raw.githubusercontent.com/Raghav1729/Altstore/refs/heads/master/assets/icons/BHTwitter.jpg",
