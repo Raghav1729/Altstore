@@ -137,7 +137,7 @@ def create_app_data(repo, releases):
     for release in releases:
         if release.get("assets"):
             version_info = {
-                "version": release["tag_name"].lstrip("v").split('-')[1] if repo == "Raghav1729/BHTwitter" else release["tag_name"].lstrip("v").split('-')[0],
+                "version": release["tag_name"].lstrip("v").split('-')[0],
                 "date": release["published_at"],
                 "localizedDescription": release.get("body", ""),  # Use get to avoid KeyError
                 "downloadURL": release["assets"][0]["browser_download_url"],
