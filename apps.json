@@ -18,25 +18,18 @@
             "tintColor": "#5CA399",
             "versions": [
                 {
+                    "version": "11.9.5",
+                    "date": "2025-07-25T11:50:17Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v11.9.5-4.4/BHTwitter-sideloaded_11.9.5_4.4.ipa",
+                    "size": 181326357
+                },
+                {
                     "version": "11.9",
                     "date": "2025-07-22T03:33:03Z",
                     "localizedDescription": "",
                     "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v11.9-4.4/BHTwitter-sideloaded_11.9_4.4.ipa",
                     "size": 181265254
-                },
-                {
-                    "version": "11.6",
-                    "date": "2025-07-01T13:48:33Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v11.6-4.4/BHTwitter-sideloaded_11.6_4.4.ipa",
-                    "size": 171223876
-                },
-                {
-                    "version": "11.5",
-                    "date": "2025-06-23T04:26:39Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v11.5-4.4/BHTwitter-sideloaded_11.5_4.4.ipa",
-                    "size": 170641556
                 }
             ],
             "name": "X",
