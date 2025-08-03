@@ -18,6 +18,13 @@
             "tintColor": "#5CA399",
             "versions": [
                 {
+                    "version": "11.10.5",
+                    "date": "2025-08-03T04:34:48Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v11.10.5-4.4/BHTwitter-sideloaded_11.10.5_4.4.ipa",
+                    "size": 181922253
+                },
+                {
                     "version": "11.10.1",
                     "date": "2025-07-31T06:22:36Z",
                     "localizedDescription": "",
