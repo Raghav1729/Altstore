@@ -18,6 +18,13 @@
             "tintColor": "#5CA399",
             "versions": [
                 {
+                    "version": "11.12.2",
+                    "date": "2025-08-12T03:35:27Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v11.12.2-4.4/BHTwitter-sideloaded_11.12.2_4.4.ipa",
+                    "size": 182036757
+                },
+                {
                     "version": "11.12.1",
                     "date": "2025-08-11T03:31:05Z",
                     "localizedDescription": "",
@@ -163,6 +170,13 @@
             "tintColor": "#5CA399",
             "versions": [
                 {
+                    "version": "20.32.4",
+                    "date": "2025-08-12T05:26:00Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v20.32.4-3.0.4/uYouPlus_20.32.4-3.0.4.ipa",
+                    "size": 130798802
+                },
+                {
                     "version": "20.31.6",
                     "date": "2025-08-07T12:29:30Z",
                     "localizedDescription": "",
@@ -189,13 +203,6 @@
                     "localizedDescription": "",
                     "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v20.28.2-3.0.4/uYouPlus_20.28.2-3.0.4.ipa",
                     "size": 130595989
-                },
-                {
-                    "version": "20.26.7",
-                    "date": "2025-07-07T04:03:20Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v20.26.7-3.0.4/uYouPlus_20.26.7-3.0.4.ipa",
-                    "size": 130417193
                 }
             ],
             "name": "YouTube",
