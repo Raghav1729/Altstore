@@ -18,11 +18,11 @@
             "tintColor": "#5CA399",
             "versions": [
                 {
-                    "version": "11.13.1",
-                    "date": "2025-08-19T13:17:01Z",
+                    "version": "11.14",
+                    "date": "2025-08-20T03:17:34Z",
                     "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v11.13.1-4.4/BHTwitter-sideloaded_11.13.1_4.4.ipa",
-                    "size": 182258970
+                    "downloadURL": "https://github.com/Raghav1729/BHTwitter/releases/download/v11.14-4.4/BHTwitter-sideloaded_11.14_4.4.ipa",
+                    "size": 181889715
                 },
                 {
                     "version": "11.13",
@@ -149,6 +149,13 @@
             "tintColor": "#5CA399",
             "versions": [
                 {
+                    "version": "20.33.2",
+                    "date": "2025-08-20T03:25:52Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v20.33.2-3.0.4/uYouPlus_20.33.2-3.0.4.ipa",
+                    "size": 130102865
+                },
+                {
                     "version": "20.32.5",
                     "date": "2025-08-18T05:05:46Z",
                     "localizedDescription": "",
@@ -175,13 +182,6 @@
                     "localizedDescription": "",
                     "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v20.29.3-3.0.4/uYouPlus_20.29.3-3.0.4.ipa",
                     "size": 130868916
-                },
-                {
-                    "version": "20.28.2",
-                    "date": "2025-07-15T03:22:19Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v20.28.2-3.0.4/uYouPlus_20.28.2-3.0.4.ipa",
-                    "size": 130595989
                 }
             ],
             "name": "YouTube",
