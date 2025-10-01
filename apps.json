@@ -163,6 +163,13 @@
             "tintColor": "#5CA399",
             "versions": [
                 {
+                    "version": "20.39.5",
+                    "date": "2025-10-01T10:16:24Z",
+                    "localizedDescription": "",
+                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v20.39.5-3.0.4/uYouPlus_20.39.5-3.0.4.ipa",
+                    "size": 131788074
+                },
+                {
                     "version": "20.38.4",
                     "date": "2025-09-25T05:46:53Z",
                     "localizedDescription": "",
@@ -189,13 +196,6 @@
                     "localizedDescription": "",
                     "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v20.34.2-3.0.4/uYouPlus_20.34.2-3.0.4.ipa",
                     "size": 130846440
-                },
-                {
-                    "version": "20.33.2",
-                    "date": "2025-08-20T03:25:52Z",
-                    "localizedDescription": "",
-                    "downloadURL": "https://github.com/Raghav1729/uYouPlus/releases/download/v20.33.2-3.0.4/uYouPlus_20.33.2-3.0.4.ipa",
-                    "size": 130102865
                 }
             ],
             "name": "YouTube",
